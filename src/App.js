@@ -94,6 +94,73 @@ function App() {
 
       <div id="projects">
         <h1>Projects</h1>
+
+        <div className="projects-grid">
+          <div className="projects-item">
+            <img src={"https://placehold.co/600x400"}></img>
+
+            <div>
+              <h1>Project #1</h1>
+              <p>
+                Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
+                Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br> Lorem
+                Ipsum.Lorem Ipsum.Lorem Ipsum.
+              </p>
+              <div className="projects-links">
+                <a>LIVE APP</a>
+                <a>LEARN MORE</a>
+              </div>
+            </div>
+          </div>
+          <div className="projects-item">
+            <img src={"https://placehold.co/600x400"}></img>
+
+            <div>
+              {" "}
+              <h1>Project #2</h1>
+              <p>
+                Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
+                Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br> Lorem
+                Ipsum.Lorem Ipsum.Lorem Ipsum.
+              </p>
+              <div className="projects-links">
+                <a>LIVE APP</a>
+                <a>LEARN MORE</a>
+              </div>
+            </div>
+          </div>
+          <div className="projects-item">
+            <img src={"https://placehold.co/600x400"}></img>
+
+            <div>
+              <h1>Project #3</h1>
+              <p>
+                Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
+                Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br> Lorem
+                Ipsum.Lorem Ipsum.Lorem Ipsum.
+              </p>
+              <div className="projects-links">
+                <a>LIVE APP</a>
+                <a>LEARN MORE</a>
+              </div>
+            </div>
+          </div>
+          <div className="projects-item">
+            <img src={"https://placehold.co/600x400"}></img>
+            <div>
+              <h1>Project #4</h1>
+              <p>
+                Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
+                Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br> Lorem
+                Ipsum.Lorem Ipsum.Lorem Ipsum.
+              </p>
+              <div className="projects-links">
+                <a>LIVE APP</a>
+                <a>LEARN MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="contact">
@@ -119,6 +186,19 @@ function App() {
           <button type="submit">Send Message</button>
         </form>
       </div>
+
+      <footer>
+        Made with ❤️ by Jason – Code available on{" "}
+        <a
+          href="https://github.com/JasonCqq/personal-site"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Site Source Code"
+          style={{ marginLeft: "5px", textDecoration: "underline" }}
+        >
+          GitHub
+        </a>
+      </footer>
     </div>
   );
 }

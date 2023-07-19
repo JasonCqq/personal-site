@@ -13,7 +13,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   cursor: none;
   box-sizing: border-box;
-  height: 500vh;
+  height: auto;
+  overflow-x: hidden;
 }
 
 code {
