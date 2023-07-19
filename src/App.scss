@@ -1,39 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+#navbar {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background-color: #1a1a1a;
+  border-bottom: 3px solid #2a2a2a;
+  z-index: 2;
+  .nav-flex {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    .nav-right {
+      display: flex;
+      margin-left: auto;
+      gap: 4vw;
+
+      .nav-link {
+        transition: color 0.2s ease;
+        padding-bottom: 5px;
+        border-bottom: 3px solid transparent;
+        &:hover {
+          color: #4f3dff;
+          border-bottom-color: #4f3dff;
+        }
+      }
+
+      #resume {
+        margin-right: 5vw;
+      }
+    }
+  }
+}
+
+#cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #4f3dff;
+  border-radius: 50%;
+  background-color: #4f3dff;
+  z-index: 99;
+}
+
+#cursorCircle {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #4f3dff;
+  border-radius: 50%;
+  background: none;
+  z-index: 0;
+}
+
 .App {
   font-family: "Inter", sans-serif;
   color: white;
-  height: 100%;
+  height: auto;
   width: 100%;
-  scroll-behavior: smooth;
   padding-top: 8vh;
 
-  // #cursor {
-  //   position: fixed;
-  //   width: 7px;
-  //   height: 7px;
-  //   border: 2px solid #fff;
-  //   border-radius: 50%;
-  //   box-shadow: 1px 1px 15px white;
-  //   background-color: white;
-  // }
-
   #landing {
-    padding-top: 10vh;
     display: flex;
     justify-content: center;
     gap: 10vw;
+    height: 85vh;
+    margin-top: 15vh;
     .landing-left {
       .landing-title {
         font-size: 4rem;
         font-weight: 500;
         color: #4f3dff;
         margin: 0;
+        padding-bottom: 5vh;
       }
       .landing-links {
         display: flex;
         gap: 1vw;
-        padding-bottom: 8vh;
+        padding-bottom: 10vh;
       }
 
       .landing-button {
@@ -41,7 +88,9 @@
         padding: 10px 25px;
         font-weight: bold;
         color: #4f3dff;
+        border-radius: 10px;
         transition: background-color 0.2s ease, color 0.2s ease;
+        margin-top: auto;
 
         &:hover {
           background-color: #4f3dff;
@@ -65,7 +114,7 @@
           padding: 1vw;
           max-width: 50px;
           max-height: 50px;
-          border: 2px solid #4f3dff;
+          border: 3px solid #4f3dff;
           border-radius: 10px;
           box-shadow: 1px 1px 5px #4f3dff;
           transition: border-color 0.2s ease;
@@ -87,7 +136,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vh;
+    padding-top: 8vh;
 
     h1 {
       color: #4f3dff;
@@ -115,6 +164,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 17vh;
 
     h1 {
       color: #4f3dff;

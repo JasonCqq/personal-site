@@ -2,6 +2,19 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
+
+  a {
+    cursor: none;
+  }
+
+  input {
+    cursor: none;
+  }
+
+  * {
+    cursor: none;
+  }
 }
 
 body {
@@ -11,10 +24,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // cursor: none;
+
   box-sizing: border-box;
   height: auto;
   overflow-x: hidden;
+
+  animation: 1s infinite alternate ease-out breathing;
+
+  @keyframes breathing {
+    from {
+      background-color: hsl(0, 0%, 5%);
+    }
+    to {
+      background-color: hsl(0, 0%, 10%);
+    }
+  }
 }
 
 code {

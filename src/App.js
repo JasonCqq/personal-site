@@ -2,39 +2,71 @@ import React, { useContext, useEffect, useRef } from "react";
 import "./App.scss";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { SiExpress } from "react-icons/si";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { motion } from "framer-motion";
+import Container from "./Container";
 
 function App() {
   // Custom Cursor
-  // useEffect(() => {
-  //   const cursor = document.getElementById("cursor");
-  //   const positionElement = (e) => {
-  //     const mouseY = e.clientY;
-  //     const mouseX = e.clientX;
+  useEffect(() => {
+    const cursor = document.getElementById("cursor");
+    const positionElement = (e) => {
+      const mouseY = e.clientY;
+      const mouseX = e.clientX;
 
-  //     cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-  //   };
+      cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    };
 
-  //   window.addEventListener("mousemove", positionElement);
-  //   return () => {
-  //     window.removeEventListener("mousemove", positionElement);
-  //   };
-  // }, []);
+    window.addEventListener("mousemove", positionElement);
+    return () => {
+      window.removeEventListener("mousemove", positionElement);
+    };
+  }, []);
 
   return (
-    <div className="App">
-      <Parallax pages={3} className="main-parallax">
-        {/* <div id="cursor"></div> */}
+    <>
+      <div id="cursor"></div>
+      <nav id="navbar">
+        <ol className="nav-flex">
+          <div className="nav-right">
+            <motion.a
+              href="#landing"
+              smooth={true}
+              className="nav-link"
+              whileHover={{ scale: 1.1 }}
+            >
+              Home
+            </motion.a>
+            <motion.a
+              href="#projects"
+              smooth={true}
+              className="nav-link"
+              whileHover={{ scale: 1.1 }}
+            >
+              Projects
+            </motion.a>
+            <motion.a
+              href="#contact"
+              smooth={true}
+              className="nav-link"
+              whileHover={{ scale: 1.1 }}
+            >
+              Contact
+            </motion.a>
+            <motion.a
+              href="#"
+              className="nav-link"
+              id="resume"
+              whileHover={{ scale: 1.1 }}
+            >
+              Resume
+            </motion.a>
+          </div>
+        </ol>
+      </nav>
 
-        <ParallaxLayer
-          speed={0.8}
-          offset={0}
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div id="landing">
+      <motion.div className="App">
+        <Container>
+          <div name="landing" id="landing">
             <div className="landing-left">
               <h1 className="landing-title">Jason Huang</h1>
               <h2>Fullstack Web Developer</h2>
@@ -82,17 +114,10 @@ function App() {
               </div>
             </div>
           </div>
-        </ParallaxLayer>
+        </Container>
 
-        <ParallaxLayer
-          speed={0.5}
-          offset={0.9}
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div id="projects">
+        <Container>
+          <div name="projects" id="projects">
             <h1>Projects</h1>
 
             <div className="projects-grid">
@@ -162,17 +187,10 @@ function App() {
               </div>
             </div>
           </div>
-        </ParallaxLayer>
+        </Container>
 
-        <ParallaxLayer
-          speed={0.5}
-          offset={2.2}
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div id="contact">
+        <Container>
+          <div name="contact" id="contact">
             <h1>Contact</h1>
             <form className="contact-form">
               <div className="contact-flex">
@@ -195,9 +213,11 @@ function App() {
               <button type="submit">Send Message</button>
             </form>
           </div>
-        </ParallaxLayer>
-      </Parallax>
-    </div>
+        </Container>
+      </motion.div>
+    </>
+
+    // </div>
   );
 }
 
