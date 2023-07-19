@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
 
 #navbar {
   position: fixed;
@@ -36,26 +36,6 @@
   }
 }
 
-#cursor {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  border: 2px solid #4f3dff;
-  border-radius: 50%;
-  background-color: #4f3dff;
-  z-index: 99;
-}
-
-#cursorCircle {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #4f3dff;
-  border-radius: 50%;
-  background: none;
-  z-index: 0;
-}
-
 .App {
   font-family: "Inter", sans-serif;
   color: white;
@@ -72,7 +52,7 @@
     .landing-left {
       .landing-title {
         font-size: 4rem;
-        font-weight: 500;
+        font-weight: bold;
         color: #4f3dff;
         margin: 0;
         padding-bottom: 5vh;
@@ -87,7 +67,7 @@
         border: 3px solid #4f3dff;
         padding: 10px 25px;
         font-weight: bold;
-        color: #4f3dff;
+        color: #ffffff;
         border-radius: 10px;
         transition: background-color 0.2s ease, color 0.2s ease;
         margin-top: auto;
@@ -148,13 +128,49 @@
       display: flex;
       flex-direction: column;
       gap: 10vh;
+      margin-top: 10vh;
 
       .projects-item {
         display: flex;
+        gap: 10vw;
+
+        img {
+          max-width: 700px;
+          max-height: 400px;
+        }
+
+        .projects-title {
+          margin: 0px;
+        }
+
+        .projects-description {
+          font-size: 1.2rem;
+          max-width: 25vw;
+          line-height: 3vh;
+        }
+
+        .projects-tech {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
 
         .projects-links {
           display: flex;
           flex-direction: column;
+          gap: 25px;
+          font-size: 1.5rem;
+          letter-spacing: 1px;
+
+          a {
+            width: 10vw;
+            border-bottom: 4px solid #4f3dff;
+            padding-bottom: 5px;
+            transition: color 0.1s ease;
+
+            &:hover {
+              color: #4f3dff;
+            }
+          }
         }
       }
     }
@@ -199,17 +215,17 @@
       input {
         background: none;
         border: none;
-        border-bottom: 2px solid #4f3dff;
         width: 25vw;
         color: white;
         font-size: 1.1rem;
         font-weight: bold;
         padding-top: 10px;
         padding-bottom: 10px;
-        border-bottom: 2px solid #4f3dff;
+        border-bottom: 3px solid #4f3dff;
 
         &:focus {
           outline: none;
+          border-bottom: 5px solid #4f3dff;
         }
       }
 
@@ -219,27 +235,28 @@
         color: white;
         height: 20vh;
         background: none;
-        border: 2px solid #4f3dff;
+        border: 3px solid #4f3dff;
         font-weight: bold;
         font-size: 1.1rem;
         &:focus {
           outline: none;
+          border: 5px solid #4f3dff;
         }
       }
 
       button {
         border: none;
         background: none;
-        color: #4f3dff;
-        border: 2px solid #4f3dff;
+        color: white;
+        border: 3px solid #4f3dff;
         font-weight: bold;
         font-size: 1.15rem;
-        padding: 5px 15px;
+        padding: 10px 15px;
         margin-top: 2vh;
-        transition: background-color 0.1s ease, color 0.1s ease;
+        transition: background-color 0.1s ease;
         &:hover {
           background-color: #4f3dff;
-          color: white;
+          cursor: pointer;
         }
       }
     }

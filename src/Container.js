@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView, useSpring } from "framer-motion";
 
 const Container = ({ children }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   return (
     <section ref={ref}>
       <span
