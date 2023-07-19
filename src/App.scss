@@ -3,55 +3,23 @@
 .App {
   font-family: "Inter", sans-serif;
   color: white;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  padding-top: 8vh;
 
-  #cursor {
-    position: fixed;
-    width: 7px;
-    height: 7px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    box-shadow: 1px 1px 15px white;
-    background-color: white;
-  }
-
-  #navbar {
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    background-color: #0a0a0b;
-    border-top: 2px solid #4f3dff;
-    .nav-flex {
-      height: 8vh;
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-
-      .nav-right {
-        display: flex;
-        margin-left: auto;
-        gap: 4vw;
-
-        .nav-link {
-          transition: color 0.2s ease;
-          padding-bottom: 5px;
-          border-bottom: 3px solid transparent;
-          &:hover {
-            color: #4f3dff;
-            border-bottom-color: #4f3dff;
-          }
-        }
-
-        #resume {
-          margin-right: 5vw;
-        }
-      }
-    }
-  }
+  // #cursor {
+  //   position: fixed;
+  //   width: 7px;
+  //   height: 7px;
+  //   border: 2px solid #fff;
+  //   border-radius: 50%;
+  //   box-shadow: 1px 1px 15px white;
+  //   background-color: white;
+  // }
 
   #landing {
-    padding-top: 20vh;
-    height: 80vh;
+    padding-top: 10vh;
     display: flex;
     justify-content: center;
     gap: 10vw;
@@ -119,6 +87,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10vh;
 
     h1 {
       color: #4f3dff;
@@ -146,7 +115,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15vh;
 
     h1 {
       color: #4f3dff;
@@ -225,15 +193,5 @@
         }
       }
     }
-  }
-
-  footer {
-    margin-top: 10vh;
-    height: 5vh;
-    background-color: #4f3dff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
   }
 }

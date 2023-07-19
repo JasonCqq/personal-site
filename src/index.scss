@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
+  // cursor: none;
   box-sizing: border-box;
   height: auto;
   overflow-x: hidden;
@@ -24,10 +24,7 @@ code {
 
 // Custom Scrollbar
 ::-webkit-scrollbar {
-  width: 7px;
-}
-::-webkit-scrollbar-thumb {
-  background: white;
+  width: 0px;
 }
 
 // CSS Reset
