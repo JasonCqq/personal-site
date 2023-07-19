@@ -22,39 +22,57 @@ function App() {
 
   return (
     <div className="App">
+      <nav id="navbar">
+        <ol className="nav-flex">
+          <div className="nav-right">
+            <a href="#landing" className="nav-link">
+              Home
+            </a>
+            <a href="#projects" className="nav-link">
+              Projects
+            </a>
+            <a href="#contact" className="nav-link">
+              Contact
+            </a>
+            <a href="#" className="nav-link" id="resume">
+              Resume
+            </a>
+          </div>
+        </ol>
+      </nav>
+
       <div id="cursor"></div>
 
-      <header className="landing">
-        <h1 className="landing-title">Jason Huang</h1>
-        <div className="landing-links">
-          <AiFillGithub size={40} />
-          <AiFillLinkedin size={40} />
-          <HiOutlineMail size={40} />
+      <header id="landing">
+        <div className="landing-left">
+          <h1 className="landing-title">Jason Huang</h1>
+          <h2>San Francisco</h2>
+          <h2>Fullstack Web Developer</h2>
+          <div className="landing-links">
+            <AiFillGithub size={40} />
+            <AiFillLinkedin size={40} />
+            <HiOutlineMail size={40} />
+          </div>
         </div>
 
-        <nav>
-          <ol>
-            <a>About</a>
-            <a>Skills</a>
-            <a>Projects</a>
-            <a>Contact</a>
-          </ol>
-        </nav>
+        <div className="landing-right">
+          <h1>Skills & Technologies</h1>
+          <div className="skills-grid">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+          </div>
+        </div>
       </header>
-
-      <div id="about">
-        <p>
-          About me Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br>
-          Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.Lorem Ipsum.
-        </p>
-      </div>
-
-      <div id="skills">
-        <p>
-          Skills/Tech Typescript, Typescript, Typescript, Typescript,
-          Typescript, Typescript,{" "}
-        </p>
-      </div>
 
       <div id="projects">
         <p> Projects </p>

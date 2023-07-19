@@ -3,6 +3,7 @@
 .App {
   font-family: "Inter", sans-serif;
   color: white;
+
   #cursor {
     position: fixed;
     width: 7px;
@@ -13,18 +14,61 @@
     background-color: white;
   }
 
-  .landing {
+  #navbar {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    background-color: #0a0a0b;
+    .nav-flex {
+      height: 8vh;
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      .nav-right {
+        display: flex;
+        margin-left: auto;
+        gap: 4vw;
+
+        .nav-link {
+          transition: color 0.2s ease;
+          padding-bottom: 5px;
+          border-bottom: 3px solid transparent;
+          &:hover {
+            color: #4f3dff;
+            border-bottom-color: #4f3dff;
+          }
+        }
+
+        #resume {
+          margin-right: 5vw;
+        }
+      }
+    }
+  }
+
+  #landing {
+    padding-top: 10vh;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    .landing-title {
-      font-size: 8rem;
-      font-weight: 500;
+    justify-content: center;
+    .landing-left {
+      .landing-title {
+        font-size: 5rem;
+        font-weight: 500;
+      }
+      .landing-links {
+        display: flex;
+        gap: 2vw;
+      }
     }
-    .landing-links {
-      display: flex;
-      gap: 2vw;
+
+    .landing-right {
+      img {
+        max-width: 75px;
+        max-height: 75px;
+      }
     }
   }
 }
