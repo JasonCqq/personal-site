@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.scss";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
+import { SiExpress } from "react-icons/si";
 
 function App() {
   // Custom Cursor
@@ -46,24 +46,42 @@ function App() {
       <header id="landing">
         <div className="landing-left">
           <h1 className="landing-title">Jason Huang</h1>
-          <h2>San Francisco</h2>
           <h2>Fullstack Web Developer</h2>
+          <h2>San Francisco</h2>
           <div className="landing-links">
-            <AiFillGithub size={40} />
-            <AiFillLinkedin size={40} />
-            <HiOutlineMail size={40} />
+            <a
+              href="https://github.com/JasonCqq"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+            >
+              <AiFillGithub size={40} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jason-huang-38813324b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linkedin Profile"
+            >
+              <AiFillLinkedin size={40} />
+            </a>
           </div>
+
+          <a href="#projects" className="landing-button">
+            View My Projects
+          </a>
         </div>
 
         <div className="landing-right">
-          <h1>Skills & Technologies</h1>
+          <h1 style={{ color: "#4f3dff" }}>Skills & Technologies</h1>
           <div className="skills-grid">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />
+            <SiExpress color="white" size={50} className="skills-express" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" />
@@ -75,11 +93,31 @@ function App() {
       </header>
 
       <div id="projects">
-        <p> Projects </p>
+        <h1>Projects</h1>
       </div>
 
       <div id="contact">
-        <p>Contact / Resume</p>
+        <h1>Contact</h1>
+        <form className="contact-form">
+          <div className="contact-flex">
+            <div className="contact-name">
+              <label htmlFor="name">NAME</label>
+              <input type="text" id="name" name="name" required></input>
+            </div>
+            <div className="contact-name">
+              <label htmlFor="email">EMAIL</label>
+              <input type="email" id="email" name="email" required></input>
+            </div>
+          </div>
+
+          <label htmlFor="subject">SUBJECT</label>
+          <input type="text" id="subject" name="subject" required></input>
+
+          <label htmlFor="message">MESSAGE</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </div>
   );
