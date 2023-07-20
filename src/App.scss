@@ -18,11 +18,11 @@
       display: flex;
       margin-left: auto;
       gap: 4vw;
+      align-items: center;
 
       .nav-link {
         transition: color 0.2s ease;
-        padding-bottom: 5px;
-        border-bottom: 3px solid transparent;
+        border-bottom: 4px solid transparent;
         &:hover {
           color: #4f3dff;
           border-bottom-color: #4f3dff;
@@ -31,6 +31,15 @@
 
       #resume {
         margin-right: 5vw;
+        border: 4px solid #4f3dff;
+        border-radius: 10px;
+        padding: 10px 20px;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+          color: white;
+          background-color: #4f3dff;
+        }
       }
     }
   }
@@ -83,14 +92,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .skills-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         column-gap: 1.25vw;
         row-gap: 3vh;
-        img,
-        .skills-express {
+
+        .skills-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-weight: bold;
+          font-size: 0.75rem;
+          height: 70px;
+          width: 70px;
+        }
+
+        img {
           padding: 1vw;
           max-width: 50px;
           max-height: 50px;
@@ -124,6 +144,12 @@
       padding-bottom: 25px;
     }
 
+    .projects-heading {
+      color: white;
+      border-bottom: 12px solid #4f3dff;
+      line-height: 0px;
+    }
+
     .projects-grid {
       display: flex;
       flex-direction: column;
@@ -132,10 +158,10 @@
 
       .projects-item {
         display: flex;
-        gap: 10vw;
+        gap: 5vw;
 
         img {
-          max-width: 700px;
+          max-width: 650px;
           max-height: 400px;
         }
 
@@ -145,13 +171,13 @@
 
         .projects-description {
           font-size: 1.2rem;
-          max-width: 25vw;
+          width: 25vw;
           line-height: 3vh;
         }
 
         .projects-tech {
           font-weight: bold;
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
 
         .projects-links {
@@ -162,7 +188,7 @@
           letter-spacing: 1px;
 
           a {
-            width: 10vw;
+            width: 15vw;
             border-bottom: 4px solid #4f3dff;
             padding-bottom: 5px;
             transition: color 0.1s ease;
@@ -183,8 +209,11 @@
     margin-top: 17vh;
 
     h1 {
-      color: #4f3dff;
+      color: white;
       padding-bottom: 25px;
+      font-size: 3rem;
+      border-bottom: 10px solid #4f3dff;
+      line-height: 0px;
     }
 
     .contact-form {

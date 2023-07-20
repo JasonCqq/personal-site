@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { useInView, useSpring } from "framer-motion";
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const Container = ({ children }) => {
   const ref = useRef(null);

@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 
   $bg-color: #1a1a1a;
-  $dot-color: #4f6b7ca5;
+  $dot-color: #4f3dff;
 
   $dot-size: 2px;
   $dot-space: 100px;
@@ -170,4 +170,545 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+@media (max-width: 300px) {
+  body {
+    #navbar {
+      .nav-flex {
+        .nav-right {
+          .nav-link {
+            font-size: 0.7rem;
+          }
+
+          #resume {
+            border: 2px solid #4f3dff;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .App {
+      #landing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          font-size: 1rem;
+        }
+
+        .landing-left {
+          margin-left: 4vw;
+
+          .landing-title {
+            font-size: 1.5rem;
+          }
+
+          .landing-button {
+            font-size: 0.6rem;
+            padding: 5px;
+            border: 2px solid #4f3dff;
+          }
+        }
+
+        .landing-right {
+          h1 {
+            font-size: 1rem;
+          }
+
+          .skills-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: 4vh;
+            column-gap: 0vw;
+
+            .skills-item {
+              img {
+                width: 40px;
+              }
+
+              p {
+                font-size: 0.55rem;
+              }
+            }
+          }
+        }
+      }
+
+      #projects {
+        margin-top: 25vh;
+
+        p {
+          font-size: 0.65rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          padding-bottom: 15px;
+        }
+        .projects-heading {
+          border-bottom: 5px solid #4f3dff;
+        }
+
+        .projects-grid {
+          .projects-item {
+            display: flex;
+            flex-direction: column;
+            img {
+              width: 250px;
+              height: 200px;
+            }
+
+            .projects-title {
+              font-size: 1.5rem;
+              padding-bottom: 0px;
+            }
+
+            .projects-links {
+              font-size: 0.7rem;
+              gap: 1vh;
+              font-weight: bold;
+
+              a {
+                width: 25vw;
+              }
+            }
+
+            .projects-description {
+              font-size: 0.75rem;
+              line-height: 1.75vh;
+              width: 50vw;
+            }
+
+            .projects-tech {
+              font-size: 0.7rem;
+              line-height: 1.5vh;
+              width: 1vw;
+            }
+          }
+        }
+      }
+
+      #contact {
+        h1 {
+          font-size: 1.75rem;
+          border-bottom: 5px solid #4f3dff;
+          padding-bottom: 15px;
+        }
+        .contact-form {
+          input {
+            width: 35vw;
+          }
+        }
+      }
+    }
+
+    footer {
+      font-size: 0.5rem;
+    }
+  }
+}
+
+/* Extra Extra small devices (phones, 300px and down) */
+@media (min-width: 300px) {
+  body {
+    #navbar {
+      .nav-flex {
+        .nav-right {
+          .nav-link {
+            font-size: 1rem;
+          }
+
+          #resume {
+            border: 2px solid #4f3dff;
+            padding: 5px 7px;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    .App {
+      #landing {
+        h2 {
+          font-size: 1rem;
+        }
+
+        .landing-left {
+          margin-left: 4vw;
+
+          .landing-title {
+            font-size: 1.5rem;
+          }
+
+          .landing-button {
+            font-size: 0.6rem;
+            padding: 5px;
+            border: 2px solid #4f3dff;
+          }
+        }
+
+        .landing-right {
+          h1 {
+            font-size: 1rem;
+          }
+
+          .skills-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: 4vh;
+            column-gap: 0vw;
+
+            .skills-item {
+              img {
+                width: 40px;
+              }
+
+              p {
+                font-size: 0.55rem;
+              }
+            }
+          }
+        }
+      }
+
+      #projects {
+        p {
+          font-size: 0.65rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          padding-bottom: 15px;
+        }
+        .projects-heading {
+          border-bottom: 5px solid #4f3dff;
+        }
+
+        .projects-grid {
+          .projects-item {
+            img {
+              width: 250px;
+              height: 200px;
+            }
+
+            .projects-title {
+              font-size: 0.85rem;
+              padding-bottom: 0px;
+            }
+
+            .projects-links {
+              font-size: 0.6rem;
+              gap: 1vh;
+              font-weight: bold;
+            }
+
+            .projects-description {
+              font-size: 0.6rem;
+              line-height: 1.2vh;
+            }
+
+            .projects-tech {
+              font-size: 0.4rem;
+              line-height: 1.2vh;
+              width: 1vw;
+            }
+          }
+        }
+      }
+
+      #contact {
+        h1 {
+          font-size: 1.75rem;
+          border-bottom: 5px solid #4f3dff;
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+    footer {
+      font-size: 0.65rem;
+    }
+  }
+}
+
+/* Extra small devices (phones, 400px and up) */
+@media only screen and (min-width: 400px) {
+  body {
+    #navbar {
+      .nav-flex {
+        .nav-right {
+          .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+
+          #resume {
+            border: 2px solid #4f3dff;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+
+    .App {
+      #landing {
+        h2 {
+          font-size: 1rem;
+        }
+
+        .landing-left {
+          margin-left: 2vw;
+
+          .landing-title {
+            font-size: 1.75rem;
+          }
+
+          .landing-button {
+            font-size: 0.6rem;
+            padding: 10px;
+          }
+        }
+
+        .landing-right {
+          h1 {
+            font-size: 1rem;
+          }
+
+          .skills-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: 4vh;
+            column-gap: 0vw;
+
+            .skills-item {
+              img {
+                width: 40px;
+              }
+
+              p {
+                font-size: 0.55rem;
+              }
+            }
+          }
+        }
+      }
+
+      #projects {
+        p {
+          font-size: 0.65rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          padding-bottom: 15px;
+        }
+        .projects-heading {
+          border-bottom: 5px solid #4f3dff;
+        }
+
+        .projects-grid {
+          .projects-item {
+            img {
+              width: 250px;
+              height: 200px;
+            }
+
+            .projects-title {
+              font-size: 1.25rem;
+              padding-bottom: 0px;
+            }
+
+            .projects-links {
+              font-size: 0.6rem;
+              gap: 1vh;
+            }
+
+            .projects-description {
+              font-size: 0.6rem;
+              line-height: 1.2vh;
+            }
+
+            .projects-tech {
+              font-size: 0.55rem;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+
+      #contact {
+        h1 {
+          font-size: 1.75rem;
+          border-bottom: 5px solid #4f3dff;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    #navbar {
+      .nav-flex {
+        .nav-right {
+          .nav-link {
+            font-size: 1.2rem;
+          }
+
+          #resume {
+            border: 2px solid #4f3dff;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+
+    .App {
+      #landing {
+        .landing-left {
+          margin-left: 2vw;
+          .landing-title {
+            font-size: 2rem;
+          }
+        }
+
+        .landing-right {
+          .skills-grid {
+            row-gap: 5vh;
+            column-gap: 2vw;
+          }
+        }
+      }
+
+      #projects {
+        .projects-grid {
+          .projects-item {
+            img {
+              width: 375px;
+              height: 250px;
+            }
+
+            .projects-title {
+              font-size: 1.45rem;
+              padding-bottom: 0px;
+            }
+
+            .projects-links {
+              font-size: 1rem;
+              gap: 1vh;
+              font-weight: bold;
+            }
+
+            .projects-description {
+              font-size: 0.8rem;
+              line-height: 1.5vh;
+            }
+
+            .projects-tech {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    .App {
+      #landing {
+        .landing-left {
+          .landing-title {
+            font-size: 3rem;
+          }
+        }
+      }
+
+      #projects {
+        .projects-grid {
+          .projects-item {
+            gap: 4vw;
+
+            img {
+              width: 300px;
+              height: 300px;
+            }
+
+            .projects-title {
+              font-size: 2rem;
+            }
+
+            .projects-description {
+              font-size: 0.85rem;
+              width: 35vw;
+            }
+
+            .projects-links {
+              font-size: 1rem;
+              gap: 25px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    #navbar {
+      .nav-flex {
+        .nav-right {
+          .nav-link {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .App {
+      #projects {
+        .projects-grid {
+          .projects-item {
+            img {
+              width: 500px;
+              height: 350px;
+            }
+
+            .projects-title {
+              font-size: 2.5rem;
+            }
+
+            .projects-tech {
+              font-size: 1rem;
+            }
+
+            .projects-links {
+              gap: 3vh;
+              font-weight: bold;
+            }
+
+            .projects-description {
+              font-size: 1rem;
+              line-height: 2.5vh;
+              width: 40vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

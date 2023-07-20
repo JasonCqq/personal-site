@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 import Container from "./Container";
 import project1 from "./project1.png";
 import project3 from "./project2.png";
+import project4 from "./project4.png";
 
 //Minify JS
+//Change proj img to video
 
 function App() {
   return (
@@ -82,58 +84,94 @@ function App() {
             </div>
 
             <div className="landing-right">
-              <h1 style={{ color: "#4f3dff" }}>Skills & Technologies</h1>
+              <h1 style={{ color: "white" }}>Skills & Technologies</h1>
               <div className="skills-grid">
-                <img
-                  alt="HTML5"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                />
-                <img
-                  alt="SASS"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                />
-                <img
-                  alt="Javascript"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                />
-                <img
-                  alt="Typescript"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                />
-                <img
-                  alt="React"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                />
-                <SiExpress
-                  alt="Express"
-                  color="white"
-                  size={50}
-                  className="skills-express"
-                />
-                <img
-                  alt="NodeJS"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
-                />
-                <img
-                  alt="MongoDB"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
-                />
-                <img
-                  alt="Firebase"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg"
-                />
-                <img
-                  alt="PostgreSQL"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
-                />
-                <img
-                  alt="Jest"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
-                />
-                <img
-                  alt="Git"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                />
+                <div className="skills-item">
+                  <img
+                    alt="HTML5"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  />
+                  <p>HTML</p>
+                </div>
+
+                <div className="skills-item">
+                  <img
+                    alt="SASS"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                  />
+                  <p>SASS</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="Javascript"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  />
+                  <p>JAVASCRIPT</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="Typescript"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  />
+                  <p>TYPESCRIPT</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="React"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  />
+                  <p>REACT</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="Express"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                  />
+
+                  <p>EXPRESS</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="NodeJS"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+                  />
+                  <p>NODE.JS</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="MongoDB"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+                  />
+                  <p>MONGODB</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="Firebase"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg"
+                  />
+                  <p>FIREBASE</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="PostgreSQL"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
+                  />
+                  <p>POSTGRESQL</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="Jest"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+                  />
+                  <p>JEST</p>
+                </div>
+                <div className="skills-item">
+                  <img
+                    alt="Git"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  />
+                  <p>GIT</p>
+                </div>
               </div>
             </div>
           </div>
@@ -142,7 +180,7 @@ function App() {
         {/* Projects Section */}
         <Container>
           <div name="projects" id="projects">
-            <h1>Projects</h1>
+            <h1 className="projects-heading">Projects</h1>
             <p>
               * Site API data takes time to load due to memory saving, please
               keep refreshing
@@ -155,7 +193,8 @@ function App() {
                 <div>
                   <h1 className="projects-title">minBlog</h1>
                   <p className="projects-tech">
-                    Tech: MongoDB, Express, NodeJS, React, Typescript
+                    Tech: MongoDB,Express,NodeJS<br></br>React,Typescript,REST
+                    API
                   </p>
                   <p className="projects-description">
                     minBlog is a reading platform, and a blog sharing platform
@@ -176,25 +215,28 @@ function App() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      LEARN MORE
+                      GITHUB
                     </a>
                   </div>
                 </div>
               </div>
               <div className="projects-item">
-                <img alt="Project 2" src={"https://placehold.co/700x400"}></img>
+                <img alt="Project 2" src={project4}></img>
 
                 <div>
                   {" "}
-                  <h1>Project #2</h1>
-                  <p>
+                  <h1 className="projects-title">Project #2</h1>
+                  <p className="projects-tech">
+                    Tech: Testing, One, Two, Three
+                  </p>
+                  <p className="projects-description">
                     Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
                     Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br> Lorem
                     Ipsum.Lorem Ipsum.Lorem Ipsum.
                   </p>
                   <div className="projects-links">
                     <a>LIVE APP</a>
-                    <a>LEARN MORE</a>
+                    <a>GITHUB</a>
                   </div>
                 </div>
               </div>
@@ -208,9 +250,9 @@ function App() {
                   </p>
                   <p className="projects-description">
                     Jwitter is a Twitter clone that replicates the core features
-                    of the popular social media platform. This project was
-                    developed from scratch without relying on tutorials to
-                    practice full stack skills.
+                    of Twitter such as realtime tweets, follow system, and
+                    likes. This project was developed from scratch without
+                    relying on tutorials to practice full stack skills.
                   </p>
                   <div className="projects-links">
                     <a
@@ -225,23 +267,39 @@ function App() {
                       rel="noopener noreferrer"
                       href="https://github.com/JasonCqq/Jwitter"
                     >
-                      LEARN MORE
+                      GITHUB
                     </a>
                   </div>
                 </div>
               </div>
               <div className="projects-item">
-                <img alt="Project 4" src={"https://placehold.co/700x400"}></img>
+                <img alt="Project 4" src={project4}></img>
                 <div>
-                  <h1>Project #4</h1>
-                  <p>
-                    Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
-                    Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br> Lorem
-                    Ipsum.Lorem Ipsum.Lorem Ipsum.
+                  <h1 className="projects-title">WimmelBilder</h1>
+                  <p className="projects-tech">
+                    Tech: Firebase,React,Typescript
+                  </p>
+                  <p className="projects-description">
+                    A where's waldo web game built with HTML/CSS, React,
+                    Typescript, Firebase, and deployed from Netlify. Site
+                    Features - Authentication / Leaderboard / Image Magnifier /
+                    Clean/Responsive UI / Scalable Positions
                   </p>
                   <div className="projects-links">
-                    <a>LIVE APP</a>
-                    <a>LEARN MORE</a>
+                    <a
+                      href="https://main--nimble-cendol-ef155b.netlify.app/#/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      LIVE APP
+                    </a>
+                    <a
+                      href="https://github.com/JasonCqq/Wimmelbilder"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GITHUB
+                    </a>
                   </div>
                 </div>
               </div>
