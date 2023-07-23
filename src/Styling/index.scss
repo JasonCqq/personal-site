@@ -15,22 +15,6 @@ body {
   box-sizing: border-box;
   height: auto;
   overflow-x: hidden;
-
-  $bg-color: #1a1a1a;
-  $dot-color: #4f3dff;
-
-  $dot-size: 2px;
-  $dot-space: 100px;
-
-  background: linear-gradient(
-        90deg,
-        $bg-color ($dot-space - $dot-size),
-        transparent 1%
-      )
-      center,
-    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-    $dot-color;
-  background-size: $dot-space $dot-space;
 }
 
 code {
@@ -38,9 +22,33 @@ code {
     monospace;
 }
 
+// 3D Background
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+// Custom Text Highlight Color
+::selection {
+  background: #4f3dff;
+}
+::-moz-selection {
+  background: #4f3dff;
+}
+
 // Custom Scrollbar
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #4f3dff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #503dffc6;
 }
 
 // CSS Reset
@@ -711,4 +719,57 @@ table {
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  body {
+    #navbar {
+      .nav-flex {
+        .nav-right {
+          #resume {
+            font-size: 1.2rem;
+            border: 4px solid #4f3dff;
+          }
+        }
+      }
+    }
+
+    .App {
+      #landing {
+        .landing-right {
+          .skills-grid {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            .skills-item {
+              p {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+
+        .landing-left {
+          .landing-button {
+            font-size: 1rem;
+            border: 4px solid #4f3dff;
+          }
+          .landing-title {
+            font-size: 4rem;
+          }
+        }
+      }
+
+      #projects {
+        .projects-grid {
+          .projects-item {
+            .projects-tech {
+              width: 25vw;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      font-size: 1rem;
+    }
+  }
 }

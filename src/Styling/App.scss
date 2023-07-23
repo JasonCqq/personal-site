@@ -45,6 +45,18 @@
   }
 }
 
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.75vh;
+  background: #4f3dff;
+  z-index: 999;
+  transform-origin: 0%;
+  margin-top: 8vh;
+}
+
 .App {
   font-family: "Inter", sans-serif;
   color: white;
@@ -176,8 +188,11 @@
         }
 
         .projects-tech {
-          font-weight: bold;
-          font-size: 1rem;
+          display: flex;
+          gap: 20px;
+          i {
+            font-size: 40px;
+          }
         }
 
         .projects-links {

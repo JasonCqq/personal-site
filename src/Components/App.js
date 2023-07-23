@@ -1,17 +1,15 @@
-import React from "react";
-import "./App.scss";
+import React, { useEffect } from "react";
+import "../Styling/App.scss";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { SiExpress } from "react-icons/si";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Container from "./Container";
-import project1 from "./project1.png";
-import project3 from "./project2.png";
-import project4 from "./project4.png";
-
-//Minify JS
-//Change proj img to video
+import project1 from "../Images/project1.png";
+import project3 from "../Images/project2.png";
+import project4 from "../Images/project4.png";
 
 function App() {
+  const { scrollYProgress } = useScroll();
+
   return (
     <>
       <nav id="navbar">
@@ -49,15 +47,19 @@ function App() {
           </div>
         </ol>
       </nav>
+      {/* Progress Bar */}
+      <motion.div
+        className="progress"
+        style={{ scaleX: scrollYProgress }}
+      ></motion.div>
 
-      <div className="App">
+      <main className="App">
         {/* Landing Section */}
         <Container>
-          <div name="landing" id="landing">
+          <section name="landing" id="landing">
             <div className="landing-left">
               <h1 className="landing-title">Jason Huang</h1>
               <h2>Fullstack Web Developer</h2>
-              <h2>San Francisco</h2>
               <div className="landing-links">
                 <a
                   href="https://github.com/JasonCqq"
@@ -174,12 +176,12 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </Container>
 
         {/* Projects Section */}
         <Container>
-          <div name="projects" id="projects">
+          <section name="projects" id="projects">
             <h1 className="projects-heading">Projects</h1>
             <p>
               * Site API data takes time to load due to memory saving, please
@@ -193,14 +195,17 @@ function App() {
                 <div>
                   <h1 className="projects-title">minBlog</h1>
                   <p className="projects-tech">
-                    Tech: MongoDB,Express,NodeJS<br></br>React,Typescript,REST
-                    API
+                    <i class="devicon-mongodb-plain-wordmark colored"></i>
+                    <i class="devicon-express-original"></i>
+                    <i class="devicon-nodejs-plain colored"></i>
+                    <i class="devicon-react-original-wordmark colored"></i>
+                    <i class="devicon-typescript-plain colored"></i>
                   </p>
                   <p className="projects-description">
                     minBlog is a reading platform, and a blog sharing platform
-                    with short (~1500chars) blogs With features like secure
-                    authentication encrypted with bcrypt Secured with
-                    passport/cookie-session along with mobile responsiveness
+                    with short (~1500chars) blogs With features like REST API,
+                    secure authentication with bcrypt, passport/cookie-session
+                    along with mobile responsiveness
                   </p>
                   <div className="projects-links">
                     <a
@@ -227,7 +232,11 @@ function App() {
                   {" "}
                   <h1 className="projects-title">Project #2</h1>
                   <p className="projects-tech">
-                    Tech: Testing, One, Two, Three
+                    <i class="devicon-mongodb-plain-wordmark colored"></i>
+                    <i class="devicon-express-original"></i>
+                    <i class="devicon-nodejs-plain colored"></i>
+                    <i class="devicon-react-original-wordmark colored"></i>
+                    <i class="devicon-typescript-plain colored"></i>
                   </p>
                   <p className="projects-description">
                     Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
@@ -246,7 +255,9 @@ function App() {
                 <div>
                   <h1 className="projects-title">Jwitter</h1>
                   <p className="projects-tech">
-                    Tech: Firebase, React, Typescript
+                    <i class="devicon-react-original-wordmark colored"></i>
+                    <i class="devicon-typescript-plain colored"></i>
+                    <i class="devicon-firebase-plain-wordmark colored"></i>
                   </p>
                   <p className="projects-description">
                     Jwitter is a Twitter clone that replicates the core features
@@ -277,7 +288,9 @@ function App() {
                 <div>
                   <h1 className="projects-title">WimmelBilder</h1>
                   <p className="projects-tech">
-                    Tech: Firebase,React,Typescript
+                    <i class="devicon-react-original-wordmark colored"></i>
+                    <i class="devicon-typescript-plain colored"></i>
+                    <i class="devicon-firebase-plain-wordmark colored"></i>
                   </p>
                   <p className="projects-description">
                     A where's waldo web game built with HTML/CSS, React,
@@ -304,12 +317,12 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </Container>
 
         {/* Contact Section */}
         <Container>
-          <div name="contact" id="contact">
+          <section name="contact" id="contact">
             <h1>Contact</h1>
             <form
               action="https://formsubmit.co/jason.cq.huang@gmail.com"
@@ -335,9 +348,9 @@ function App() {
 
               <button type="submit">Send Message</button>
             </form>
-          </div>
+          </section>
         </Container>
-      </div>
+      </main>
     </>
 
     // </div>
