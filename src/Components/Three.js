@@ -1,5 +1,3 @@
-import React from "react";
-import "../Styling/Three.scss";
 import * as THREE from "three";
 
 function Three() {
@@ -16,32 +14,40 @@ function Three() {
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.position.setZ(30);
-
   renderer.render(scene, camera);
 
-  const geometry = new THREE.SphereGeometry(15, 32, 16);
-  const material = new THREE.MeshStandardMaterial({
-    color: 0xffff00,
-  });
-  const sphere = new THREE.Mesh(geometry, material);
+  //   const controls = new OrbitControls(camera, renderer.domElement);
 
-  scene.add(sphere);
+  const geometry = new THREE.SphereGeometry(0.2, 15, 25);
+  const material = new THREE.MeshBasicMaterial({ color: 0x9a5ee6 });
+  const addDots = () => {
+    const star = new THREE.Mesh(geometry, material);
 
-  const pointLight = new THREE.PointLight(0xffffff);
+    const [x, y, z] = Array(3)
+      .fill()
+      .map(() => THREE.MathUtils.randFloatSpread(100));
+    star.position.set(x, y, z);
+    scene.add(star);
+  };
+
+  Array(200).fill().forEach(addDots);
+
+  scene.background = new THREE.Color(0x121212);
+
+  const moveCamera = () => {
+    const top = document.body.getBoundingClientRect().top;
+    camera.position.z = top * -0.02;
+    camera.position.x = top * -0.0002;
+    camera.position.y = top * -0.0002;
+  };
+
+  document.body.onscroll = moveCamera;
 
   const animate = () => {
     requestAnimationFrame(animate);
-
-    sphere.rotation.x += 0.01;
-    sphere.rotation.y += 0.005;
-    sphere.rotation.z += 0.01;
-
     renderer.render(scene, camera);
   };
-
   animate();
-
-  return <div></div>;
 }
 
 export default Three;

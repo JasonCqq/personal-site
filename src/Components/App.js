@@ -1,58 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../Styling/App.scss";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { motion, useScroll } from "framer-motion";
 import Container from "./Container";
 import project1 from "../Images/project1.png";
 import project3 from "../Images/project2.png";
 import project4 from "../Images/project4.png";
 
 function App() {
-  const { scrollYProgress } = useScroll();
-
   return (
     <>
-      <nav id="navbar">
-        <ol className="nav-flex">
-          <div className="nav-right">
-            <motion.a
-              href="#landing"
-              className="nav-link"
-              whileHover={{ scale: 1.1 }}
-            >
-              Home
-            </motion.a>
-            <motion.a
-              href="#projects"
-              className="nav-link"
-              whileHover={{ scale: 1.1 }}
-            >
-              Projects
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="nav-link"
-              whileHover={{ scale: 1.1 }}
-            >
-              Contact
-            </motion.a>
-            <motion.a
-              href="#"
-              className="nav-link"
-              id="resume"
-              whileHover={{ scale: 1.1 }}
-            >
-              Resume
-            </motion.a>
-          </div>
-        </ol>
-      </nav>
-      {/* Progress Bar */}
-      <motion.div
-        className="progress"
-        style={{ scaleX: scrollYProgress }}
-      ></motion.div>
-
       <main className="App">
         {/* Landing Section */}
         <Container>
@@ -127,15 +83,15 @@ function App() {
                 <div className="skills-item">
                   <img
                     alt="Express"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                  />
+                    src="https://devicon-website.vercel.app/api/express/original.svg?color=%23FFFFFF"
+                  ></img>
 
                   <p>EXPRESS</p>
                 </div>
                 <div className="skills-item">
                   <img
                     alt="NodeJS"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                   />
                   <p>NODE.JS</p>
                 </div>
@@ -183,7 +139,7 @@ function App() {
         <Container>
           <section name="projects" id="projects">
             <h1 className="projects-heading">Projects</h1>
-            <p>
+            <p style={{ fontSize: "0.8rem" }}>
               * Site API data takes time to load due to memory saving, please
               keep refreshing
             </p>
@@ -195,11 +151,11 @@ function App() {
                 <div>
                   <h1 className="projects-title">minBlog</h1>
                   <p className="projects-tech">
-                    <i class="devicon-mongodb-plain-wordmark colored"></i>
-                    <i class="devicon-express-original"></i>
-                    <i class="devicon-nodejs-plain colored"></i>
-                    <i class="devicon-react-original-wordmark colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
+                    <i className="devicon-mongodb-plain-wordmark colored"></i>
+                    <i className="devicon-express-original"></i>
+                    <i className="devicon-nodejs-plain colored"></i>
+                    <i className="devicon-react-original-wordmark colored"></i>
+                    <i className="devicon-typescript-plain colored"></i>
                   </p>
                   <p className="projects-description">
                     minBlog is a reading platform, and a blog sharing platform
@@ -232,11 +188,11 @@ function App() {
                   {" "}
                   <h1 className="projects-title">Project #2</h1>
                   <p className="projects-tech">
-                    <i class="devicon-mongodb-plain-wordmark colored"></i>
-                    <i class="devicon-express-original"></i>
-                    <i class="devicon-nodejs-plain colored"></i>
-                    <i class="devicon-react-original-wordmark colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
+                    <i className="devicon-mongodb-plain-wordmark colored"></i>
+                    <i className="devicon-express-original"></i>
+                    <i className="devicon-nodejs-plain colored"></i>
+                    <i className="devicon-react-original-wordmark colored"></i>
+                    <i className="devicon-typescript-plain colored"></i>
                   </p>
                   <p className="projects-description">
                     Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
@@ -255,9 +211,9 @@ function App() {
                 <div>
                   <h1 className="projects-title">Jwitter</h1>
                   <p className="projects-tech">
-                    <i class="devicon-react-original-wordmark colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
-                    <i class="devicon-firebase-plain-wordmark colored"></i>
+                    <i className="devicon-react-original-wordmark colored"></i>
+                    <i className="devicon-typescript-plain colored"></i>
+                    <i className="devicon-firebase-plain-wordmark colored"></i>
                   </p>
                   <p className="projects-description">
                     Jwitter is a Twitter clone that replicates the core features
@@ -288,9 +244,9 @@ function App() {
                 <div>
                   <h1 className="projects-title">WimmelBilder</h1>
                   <p className="projects-tech">
-                    <i class="devicon-react-original-wordmark colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
-                    <i class="devicon-firebase-plain-wordmark colored"></i>
+                    <i className="devicon-react-original-wordmark colored"></i>
+                    <i className="devicon-typescript-plain colored"></i>
+                    <i className="devicon-firebase-plain-wordmark colored"></i>
                   </p>
                   <p className="projects-description">
                     A where's waldo web game built with HTML/CSS, React,
@@ -352,8 +308,6 @@ function App() {
         </Container>
       </main>
     </>
-
-    // </div>
   );
 }
 
