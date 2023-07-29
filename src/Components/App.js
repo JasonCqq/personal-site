@@ -2,9 +2,6 @@ import React from "react";
 import "../Styling/App.scss";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Container from "./Container";
-import project1 from "../Images/project1.png";
-import project3 from "../Images/project2.png";
-import project4 from "../Images/project4.png";
 
 function App() {
   return (
@@ -23,7 +20,7 @@ function App() {
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
                 >
-                  <AiFillGithub size={40} />
+                  <AiFillGithub size={40} className="landing-socials" />
                 </a>
 
                 <a
@@ -32,7 +29,7 @@ function App() {
                   rel="noopener noreferrer"
                   aria-label="Linkedin Profile"
                 >
-                  <AiFillLinkedin size={40} />
+                  <AiFillLinkedin size={40} className="landing-socials" />
                 </a>
               </div>
 
@@ -95,6 +92,15 @@ function App() {
                   />
                   <p>NODE.JS</p>
                 </div>
+
+                <div className="skills-item">
+                  <img
+                    alt="PostgreSQL"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
+                  />
+                  <p>POSTGRESQL</p>
+                </div>
+
                 <div className="skills-item">
                   <img
                     alt="MongoDB"
@@ -111,10 +117,11 @@ function App() {
                 </div>
                 <div className="skills-item">
                   <img
-                    alt="PostgreSQL"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
+                    alt="Ubuntu"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg"
                   />
-                  <p>POSTGRESQL</p>
+                  <p>UBUNTU</p>
+                  
                 </div>
                 <div className="skills-item">
                   <img
@@ -146,22 +153,29 @@ function App() {
 
             <div className="projects-grid">
               <div className="projects-item">
-                <img alt="Project 1" src={project1}></img>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/J5s9PAta4V0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              ></iframe>
 
                 <div>
-                  <h1 className="projects-title">minBlog</h1>
+                  <h1 className="projects-title">CodePlanner</h1>
                   <p className="projects-tech">
-                    <i className="devicon-mongodb-plain-wordmark colored"></i>
+                    <i className="devicon-postgresql-plain-wordmark colored"></i>
+                    <i className="devicon-jest-plain colored"></i>
                     <i className="devicon-express-original"></i>
-                    <i className="devicon-nodejs-plain colored"></i>
                     <i className="devicon-react-original-wordmark colored"></i>
+                    <i className="devicon-nodejs-plain colored"></i>
                     <i className="devicon-typescript-plain colored"></i>
                   </p>
                   <p className="projects-description">
                     minBlog is a reading platform, and a blog sharing platform
-                    with short (~1500chars) blogs With features like REST API,
-                    secure authentication with bcrypt, passport/cookie-session
-                    along with mobile responsiveness
+                    with short (~1500chars) blogs. With features like REST API,
+                    secure authentication with bcrypt, passport/sessions along
+                    with blog searching, filtering, and pagination
                   </p>
                   <div className="projects-links">
                     <a
@@ -182,11 +196,16 @@ function App() {
                 </div>
               </div>
               <div className="projects-item">
-                <img alt="Project 2" src={project4}></img>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/J5s9PAta4V0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              ></iframe>
 
                 <div>
-                  {" "}
-                  <h1 className="projects-title">Project #2</h1>
+                  <h1 className="projects-title">minBlog</h1>
                   <p className="projects-tech">
                     <i className="devicon-mongodb-plain-wordmark colored"></i>
                     <i className="devicon-express-original"></i>
@@ -195,18 +214,37 @@ function App() {
                     <i className="devicon-typescript-plain colored"></i>
                   </p>
                   <p className="projects-description">
-                    Lorem Ipsum. Lorem Ipsum.Lorem Ipsum. Lorem Ipsum. <br></br>{" "}
-                    Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. <br></br> Lorem
-                    Ipsum.Lorem Ipsum.Lorem Ipsum.
+                    minBlog is a reading platform, and a blog sharing platform
+                    with short (~1500chars) blogs. With features like REST API,
+                    secure authentication with bcrypt, passport/sessions along
+                    with blog searching, filtering, and pagination
                   </p>
                   <div className="projects-links">
-                    <a>LIVE APP</a>
-                    <a>GITHUB</a>
+                    <a
+                      href="https://minblog21715.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      LIVE APP
+                    </a>
+                    <a
+                      href="https://github.com/JasonCqq/minBlog"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GITHUB
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="projects-item">
-                <img alt="Project 3" src={project3}></img>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/J5s9PAta4V0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              ></iframe>
 
                 <div>
                   <h1 className="projects-title">Jwitter</h1>
@@ -239,8 +277,16 @@ function App() {
                   </div>
                 </div>
               </div>
+
               <div className="projects-item">
-                <img alt="Project 4" src={project4}></img>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/J5s9PAta4V0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              ></iframe>
+
                 <div>
                   <h1 className="projects-title">WimmelBilder</h1>
                   <p className="projects-tech">
@@ -249,23 +295,23 @@ function App() {
                     <i className="devicon-firebase-plain-wordmark colored"></i>
                   </p>
                   <p className="projects-description">
-                    A where's waldo web game built with HTML/CSS, React,
+                  A where's waldo based web game built with HTML/CSS, React,
                     Typescript, Firebase, and deployed from Netlify. Site
                     Features - Authentication / Leaderboard / Image Magnifier /
                     Clean/Responsive UI / Scalable Positions
                   </p>
                   <div className="projects-links">
                     <a
-                      href="https://main--nimble-cendol-ef155b.netlify.app/#/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      href="https://main--nimble-cendol-ef155b.netlify.app/#/"
                     >
                       LIVE APP
                     </a>
                     <a
-                      href="https://github.com/JasonCqq/Wimmelbilder"
                       target="_blank"
                       rel="noopener noreferrer"
+                      href="https://github.com/JasonCqq/Wimmelbilder"
                     >
                       GITHUB
                     </a>

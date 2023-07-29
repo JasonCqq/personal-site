@@ -1,12 +1,13 @@
 import * as THREE from "three";
 
+// Dotted Background
 function Three() {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     0.1,
-    1000
+    1000,
   );
   const renderer = new THREE.WebGL1Renderer({
     canvas: document.querySelector("#bg"),
@@ -16,10 +17,8 @@ function Three() {
   camera.position.setZ(30);
   renderer.render(scene, camera);
 
-  //   const controls = new OrbitControls(camera, renderer.domElement);
-
   const geometry = new THREE.SphereGeometry(0.2, 15, 25);
-  const material = new THREE.MeshBasicMaterial({ color: 0x9a5ee6 });
+  const material = new THREE.MeshMatcapMaterial({ color: 0x504eeb });
   const addDots = () => {
     const star = new THREE.Mesh(geometry, material);
 
@@ -32,7 +31,7 @@ function Three() {
 
   Array(200).fill().forEach(addDots);
 
-  scene.background = new THREE.Color(0x121212);
+  scene.background = new THREE.Color(0x111827);
 
   const moveCamera = () => {
     const top = document.body.getBoundingClientRect().top;

@@ -9,9 +9,9 @@ import Nav from "./Components/Nav";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Three />
     <Nav />
     <App />
     <Footer />
+    <Three />
   </React.StrictMode>
 );

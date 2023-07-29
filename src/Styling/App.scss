@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
-
 .App {
   position: absolute;
-  font-family: "Inter", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: white;
   height: 100%;
   width: 100%;
@@ -19,24 +17,31 @@
       .landing-title {
         font-size: 4rem;
         font-weight: bold;
-        color: #6d31e8;
+        color: #504eeb;
         margin: 0;
-        padding-bottom: 5vh;
+        padding-bottom: 3vh;
       }
       .landing-links {
         display: flex;
         gap: 1vw;
-        padding-bottom: 10vh;
+        padding-bottom: 5vh;
+        padding-top: 3vh;
+      }
+
+      .landing-socials {
+        transition: color 0.15s ease-in-out;
+        &:hover {
+          color: #504eeb;
+        }
       }
 
       .landing-button {
-        border: 3px solid #6d31e8;
+        border: 3px solid #504eeb;
         padding: 10px 35px;
         font-weight: bold;
         color: #ffffff;
-        border-radius: 10px;
-        background: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #6d31e8 50%)
-          right;
+        border-radius: 5px;
+        background: linear-gradient(to left, #111827 50%, #504eeb 50%) right;
         background-size: 200% 100%;
         transition: background-position 0.5s;
         &:hover {
@@ -72,11 +77,11 @@
           padding: 1vw;
           max-width: 50px;
           max-height: 50px;
-          border: 3px solid #6d31e8;
-          border-radius: 10px;
-          box-shadow: 1px 1px 5px #6d31e8;
+          border: 3px solid #504eeb;
+          border-radius: 5px;
+          box-shadow: 1px 1px 5px #504eeb;
           transition: border-color 0.1s ease;
-
+          background-color: #111827;
           &:hover {
             border-color: white;
           }
@@ -94,17 +99,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 8vh;
+    margin-top: 8vh;
 
     h1 {
-      color: #6d31e8;
+      color: white;
       font-size: 3rem;
       padding-bottom: 25px;
     }
 
     .projects-heading {
       color: white;
-      border-bottom: 12px solid #6d31e8;
+      border-bottom: 12px solid #504eeb;
       line-height: 0px;
     }
 
@@ -118,9 +123,11 @@
         display: flex;
         gap: 5vw;
 
-        img {
+        iframe {
           max-width: 650px;
           max-height: 400px;
+          border: 2px solid #504eeb;
+          box-shadow: 1px 1px 25px #504eeb;
         }
 
         .projects-title {
@@ -151,15 +158,10 @@
 
           a {
             width: 8vw;
-            border-bottom: 3px solid #6d31e8;
-            padding: 10px 0px;
-            background: linear-gradient(
-                to left,
-                rgba(0, 0, 0, 0) 50%,
-                #6d31e8 51%
-              )
-              right;
-            background-size: 200% 100%;
+            border-bottom: 3px solid #504eeb;
+            padding: 15px 0px 5px 0px;
+            background: linear-gradient(to left, #111827 50%, #504eeb 50%) right;
+            background-size: 205% 105%;
             transition: background-position 0.3s;
             &:hover {
               cursor: pointer;
@@ -181,7 +183,7 @@
       color: white;
       padding-bottom: 25px;
       font-size: 3rem;
-      border-bottom: 10px solid #6d31e8;
+      border-bottom: 10px solid #504eeb;
       line-height: 0px;
     }
 
@@ -203,7 +205,7 @@
 
       #subject {
         padding-top: 0px;
-        width: 80%;
+        width: 100% !important;
       }
 
       label {
@@ -214,18 +216,18 @@
       input {
         background: none;
         border: none;
-        width: 25%;
+        width: 100% !important;
         color: white;
         font-size: 1.1rem;
         font-weight: bold;
         padding-top: 10px;
         padding-bottom: 10px;
-        border-bottom: 3px solid #6d31e8;
-        background-color: #121212;
+        border-bottom: 3px solid #504eeb;
+        background-color: #111827;
 
         &:focus {
           outline: none;
-          border-bottom: 5px solid #6d31e8;
+          border-bottom: 5px solid #504eeb;
         }
       }
 
@@ -234,35 +236,29 @@
         resize: none;
         color: white;
         height: 20vh;
-        background-color: #121212;
-        border: 3px solid #6d31e8;
+        background-color: #111827;
+        border: 3px solid #504eeb;
         font-weight: bold;
         font-size: 1.1rem;
 
         &:focus {
           outline: none;
-          border: 5px solid #6d31e8;
+          border: 5px solid #504eeb;
         }
       }
 
       button {
-        width: 100%;
-        border: none;
-        background: none;
+        width: 100% !important;
         color: white;
-        border: 3px solid #6d31e8;
+        border: 3px solid #504eeb;
         font-weight: bold;
         font-size: 1.15rem;
         padding: 10px 15px;
-        margin-top: 2vh;
-
-        background: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, #6d31e8 50%)
-          right;
-        background-size: 200% 100%;
-        transition: background-position 0.5s;
+        margin-top: 1vh;
+        background-color: #111827;
+        transition: background-color 0.1s ease-in-out !important;
         &:hover {
-          cursor: pointer;
-          background-position: 0 -100%;
+          background-color: #504eeb !important;
         }
       }
     }
