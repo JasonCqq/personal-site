@@ -1,11 +1,14 @@
 #navbar {
+  height: 10vh;
   .nav-flex {
-    width: 99.9vw;
     height: 10vh;
+    width: 99.9vw;
     background-color: #111827;
     border-bottom: 1px solid #282828;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -42,9 +45,9 @@
   }
 }
 
-#resumePop{
+#resumePop {
   position: fixed;
-  background-color: rgba(0,0,0,0.25);
+  background-color: rgba(0, 0, 0, 0.25);
   width: 100vw;
   height: 100vh;
   font-size: 4rem;
@@ -54,12 +57,41 @@
   justify-content: center;
   align-items: center;
 
-  .resumeWindow{
+  .resumeWindow {
     position: fixed;
     background-color: #111827;
     border: 3px solid #504eeb;
-    height: 90vh;
+    height: 85vh;
     width: 65vw;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .resumeClose {
+      border: none;
+      background-color: #111827;
+      border: 2px solid #504eeb;
+      border-radius: 5px;
+      font-size: 1.25rem;
+      padding: 10px 25px;
+      height: 5vh;
+      margin-left: 2vw;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #504eeb !important;
+      }
+    }
+
+    #resumeEmbed {
+      width: 80%;
+      height: 95%;
+      border: none;
+      margin-top: 2vh;
+    }
   }
 }
 

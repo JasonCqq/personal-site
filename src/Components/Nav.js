@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import "../Styling/Nav.scss";
 
@@ -8,16 +8,15 @@ function Nav() {
   const [resume, setResume] = useState(false);
   const resumeHandle = () => {
     setResume(!resume);
-  }
+  };
 
-  useEffect(()=>{
-    if(!resume){
+  useEffect(() => {
+    if (!resume) {
       document.body.style.overflowY = "auto";
     } else if (resume) {
       document.body.style.overflowY = "hidden";
     }
-  }, [resume])
-
+  }, [resume]);
 
   return (
     <>
@@ -41,10 +40,7 @@ function Nav() {
             >
               Contact
             </motion.a>
-            <button
-              id="resume"
-              onClick={() => resumeHandle()}
-            >
+            <button id="resume" onClick={() => resumeHandle()}>
               Resume
             </button>
           </div>
@@ -52,24 +48,27 @@ function Nav() {
       </nav>
 
       {/* Resume Pop up */}
-      {resume && 
+      {resume && (
         <div id="resumePop">
-          <motion.div 
+          <motion.div
             className="resumeWindow"
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity: 0}}
-            transition={{duration: 0.3}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <button 
-            onClick={() => resumeHandle()} 
-            style={{color: "white"}}
-            >
-              Close
-            </button> 
+            <button className="resumeClose" onClick={() => resumeHandle()}>
+              EXIT
+            </button>
+
+            <iframe
+              id="resumeEmbed"
+              title="Resume"
+              src="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub?embedded=true"
+            ></iframe>
           </motion.div>
         </div>
-      }
+      )}
 
       {/* Progress Bar */}
       <motion.div
