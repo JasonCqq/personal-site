@@ -10,7 +10,6 @@ function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Site Source Code"
-        style={{ marginLeft: "5px", textDecoration: "underline" }}
       >
         GitHub
       </a>

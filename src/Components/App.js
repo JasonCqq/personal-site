@@ -12,7 +12,7 @@ function App() {
           <section name="landing" id="landing">
             <div className="landing-left">
               <h1 className="landing-title">Jason Huang</h1>
-              <h2>Fullstack Web Developer</h2>
+              <h2>Fullstack Web Developer • San Francisco</h2>
               <div className="landing-links">
                 <a
                   href="https://github.com/JasonCqq"
@@ -300,7 +300,9 @@ function App() {
               <label htmlFor="message">MESSAGE</label>
               <textarea id="message" name="message" required></textarea>
 
-              <button type="submit">Send Message</button>
+              <button className="message-button" type="submit">
+                Send Message
+              </button>
             </form>
           </section>
         </Container>

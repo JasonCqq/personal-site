@@ -1,6 +1,5 @@
 .App {
   position: absolute;
-  font-family: "Ubuntu", sans-serif;
   color: white;
   height: 100%;
   width: 100%;
@@ -31,6 +30,7 @@
       .landing-socials {
         transition: color 0.15s ease-in-out;
         &:hover {
+          cursor: var(--cursorPointer);
           color: #504eeb;
         }
       }
@@ -45,7 +45,7 @@
         background-size: 200% 100%;
         transition: background-position 0.5s;
         &:hover {
-          cursor: pointer;
+          cursor: var(--cursorPointer);
           background-position: 0 -100%;
         }
       }
@@ -164,7 +164,7 @@
             background-size: 205% 105%;
             transition: background-position 0.3s;
             &:hover {
-              cursor: pointer;
+              cursor: var(--cursorPointer);
               background-position: 0 -100%;
             }
           }
@@ -205,7 +205,7 @@
 
       #subject {
         padding-top: 0px;
-        width: 100% !important;
+        width: 100%;
       }
 
       label {
@@ -216,7 +216,7 @@
       input {
         background: none;
         border: none;
-        width: 100% !important;
+        width: 100%;
         color: white;
         font-size: 1.1rem;
         font-weight: bold;
@@ -247,8 +247,8 @@
         }
       }
 
-      button {
-        width: 100% !important;
+      .message-button {
+        width: 100%;
         color: white;
         border: 3px solid #504eeb;
         font-weight: bold;
@@ -256,9 +256,10 @@
         padding: 10px 15px;
         margin-top: 1vh;
         background-color: #111827;
-        transition: background-color 0.1s ease-in-out !important;
+        transition: background-color 0.1s ease-in-out;
         &:hover {
-          background-color: #504eeb !important;
+          background-color: #504eeb;
+          cursor: var(--cursorPointer);
         }
       }
     }

@@ -33,12 +33,15 @@
         border: 4px solid #504eeb;
         border-radius: 5px;
         padding: 10px 20px;
-        transition: background-color 0.2s ease-in-out !important;
+        transition: background-color 0.2s ease-in-out;
         color: white;
+        background-color: #111827;
+        font-family: "REM", sans-serif;
 
         &:hover {
           color: white;
-          background-color: #504eeb !important;
+          background-color: #504eeb;
+          cursor: var(--cursorPointer);
         }
       }
     }
@@ -82,7 +85,8 @@
       transition: background-color 0.2s ease-in-out;
 
       &:hover {
-        background-color: #504eeb !important;
+        background-color: #504eeb;
+        cursor: var(--cursorPointer);
       }
     }
 
