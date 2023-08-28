@@ -57,13 +57,27 @@ function Nav() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <button className="resumeClose" onClick={() => resumeHandle()}>
-              EXIT
-            </button>
+            <div className="resumeFunctions">
+              <button className="resumeClose" onClick={() => resumeHandle()}>
+                EXIT
+              </button>
+
+              <a
+                className="resumeDownload resumeClose"
+                href="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Resume on Google Docs"
+              >
+                Open on Docs
+              </a>
+            </div>
 
             <iframe
               id="resumeEmbed"
               title="Resume"
+              width="100%"
+              height="700px"
               src="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub?embedded=true"
             ></iframe>
           </motion.div>

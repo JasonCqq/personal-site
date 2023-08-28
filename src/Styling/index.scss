@@ -212,6 +212,7 @@ table {
   border-spacing: 0;
 }
 
+/* (Screens below 300px) */
 @media (max-width: 300px) {
   body {
     #navbar {
@@ -350,7 +351,7 @@ table {
   }
 }
 
-/* Extra Extra small devices (phones, 300px and down) */
+/* Extra Extra small devices (phones, 300px and up) */
 @media (min-width: 300px) {
   body {
     #navbar {
@@ -366,6 +367,21 @@ table {
             padding: 5px 7px;
             font-size: 0.7rem;
           }
+        }
+      }
+    }
+
+    #resumePop {
+      .resumeWindow {
+        .resumeFunctions {
+          .resumeClose {
+            font-size: 0.7rem;
+            padding: 0px 20px;
+          }
+        }
+
+        #resumeEmbed {
+          display: none;
         }
       }
     }
@@ -629,6 +645,14 @@ table {
       }
     }
 
+    #resumePop {
+      .resumeWindow {
+        #resumeEmbed {
+          display: block;
+        }
+      }
+    }
+
     .App {
       #landing {
         margin-top: 0;
@@ -716,7 +740,6 @@ table {
 
     .App {
       #landing {
-        margin-top: 7vh;
         .landing-right {
           .skills-grid {
             row-gap: 3vh;
@@ -813,10 +836,10 @@ table {
       #landing {
         .landing-right {
           .skills-grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(3, 1fr);
             row-gap: 5vh;
-            column-gap: 3vw;
+            column-gap: 4vw;
 
             .skills-item {
               p {
@@ -908,7 +931,7 @@ table {
       #landing {
         .landing-right {
           .skills-grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(3, 1fr);
             row-gap: 5vh;
             column-gap: 3vw;

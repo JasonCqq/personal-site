@@ -25,6 +25,7 @@
         transition: color 0.2s ease;
         &:hover {
           color: #504eeb;
+          cursor: var(--cursorPointer);
         }
       }
 
@@ -65,36 +66,50 @@
     background-color: #111827;
     border: 3px solid #504eeb;
     height: 85vh;
-    width: 65vw;
+    width: 85vw;
     overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .resumeClose {
-      border: none;
-      background-color: #111827;
-      border: 2px solid #504eeb;
-      border-radius: 5px;
-      font-size: 1.25rem;
-      padding: 10px 25px;
-      height: 5vh;
-      margin-left: 2vw;
-      color: white;
-      font-weight: bold;
-      transition: background-color 0.2s ease-in-out;
+    .resumeFunctions {
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
 
-      &:hover {
-        background-color: #504eeb;
-        cursor: var(--cursorPointer);
+      .resumeClose {
+        border: none;
+        background-color: #111827;
+        border: 2px solid #504eeb;
+        border-radius: 5px;
+        font-size: 1.25rem;
+        padding: 10px 25px;
+        height: 5vh;
+        margin-left: 2vw;
+        color: white;
+        font-weight: bold;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+          background-color: #504eeb;
+          cursor: var(--cursorPointer);
+        }
+      }
+
+      .resumeDownload {
+        font-size: 1rem;
+        padding: 5px 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
     #resumeEmbed {
-      width: 80%;
-      height: 95%;
       border: none;
       margin-top: 2vh;
+      margin-left: 3vw;
     }
   }
 }

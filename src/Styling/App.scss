@@ -58,7 +58,7 @@
 
       .skills-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
         column-gap: 1.25vw;
         row-gap: 3vh;
@@ -223,7 +223,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
         border-bottom: 3px solid #504eeb;
-        background-color: #111827;
+        background: none;
 
         &:focus {
           outline: none;
@@ -238,8 +238,10 @@
         height: 20vh;
         background-color: #111827;
         border: 3px solid #504eeb;
+        border-radius: 5px;
         font-weight: bold;
         font-size: 1.1rem;
+        padding: 10px;
 
         &:focus {
           outline: none;
@@ -251,6 +253,7 @@
         width: 100%;
         color: white;
         border: 3px solid #504eeb;
+        border-radius: 5px;
         font-weight: bold;
         font-size: 1.15rem;
         padding: 10px 15px;

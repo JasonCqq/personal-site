@@ -39,7 +39,9 @@ function App() {
             </div>
 
             <div className="landing-right">
-              <h1 style={{ color: "white" }}>Skills & Technologies</h1>
+              <h1 style={{ color: "white", fontSize: "0.9rem" }}>
+                Skills & Technologies
+              </h1>
               <div className="skills-grid">
                 <div className="skills-item">
                   <img
@@ -56,6 +58,7 @@ function App() {
                   />
                   <p>SASS</p>
                 </div>
+
                 <div className="skills-item">
                   <img
                     alt="Javascript"
@@ -63,6 +66,7 @@ function App() {
                   />
                   <p>JAVASCRIPT</p>
                 </div>
+
                 <div className="skills-item">
                   <img
                     alt="Typescript"
@@ -70,6 +74,7 @@ function App() {
                   />
                   <p>TYPESCRIPT</p>
                 </div>
+
                 <div className="skills-item">
                   <img
                     alt="React"
@@ -77,6 +82,15 @@ function App() {
                   />
                   <p>REACT</p>
                 </div>
+
+                <div className="skills-item">
+                  <img
+                    alt="Angular"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                  />
+                  <p>ANGULAR</p>
+                </div>
+
                 <div className="skills-item">
                   <img
                     alt="Express"
@@ -85,6 +99,7 @@ function App() {
 
                   <p>EXPRESS</p>
                 </div>
+
                 <div className="skills-item">
                   <img
                     alt="NodeJS"
@@ -100,6 +115,23 @@ function App() {
                   />
                   <p>MONGOOSE</p>
                 </div>
+
+                <div className="skills-item">
+                  <img
+                    alt="PostgreSQL"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                  />
+                  <p>POSTGRESQL</p>
+                </div>
+
+                <div className="skills-item">
+                  <img
+                    alt="Prisma ORM"
+                    src="https://img.icons8.com/color/48/prisma-orm.png"
+                  />
+                  <p>PRISMA</p>
+                </div>
+
                 <div className="skills-item">
                   <img
                     alt="Firebase"
@@ -107,6 +139,7 @@ function App() {
                   />
                   <p>FIREBASE</p>
                 </div>
+
                 <div className="skills-item">
                   <img
                     alt="Ubuntu"
@@ -114,6 +147,7 @@ function App() {
                   />
                   <p>UBUNTU</p>
                 </div>
+
                 <div className="skills-item">
                   <img
                     alt="Jest"
@@ -121,6 +155,7 @@ function App() {
                   />
                   <p>JEST</p>
                 </div>
+
                 <div className="skills-item">
                   <img
                     alt="Git"
@@ -143,6 +178,57 @@ function App() {
             </p>
 
             <div className="projects-grid">
+              <div className="projects-item">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/3LzCY1Fpias?si=5DOBQQrAn8PIE7oC"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <div>
+                  <h1 className="projects-title">LinkStorage</h1>
+                  <p className="projects-tech">
+                    <i className="devicon-postgresql-plain-wordmark colored"></i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 424 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="m381.39 405.887l-229.671 67.928c-7.017 2.077-13.742-3.992-12.267-11.073L221.5 69.81c1.535-7.352 11.692-8.515 14.896-1.71l151.918 322.595c2.865 6.09-.404 13.267-6.925 15.193zm39.384-16.028L244.876 16.326C233.28-5.365 205.84-4.578 195.12 13.576L4.348 322.567c-5.91 9.635-5.793 21.51.336 31.02l93.253 144.459c9.615 11.463 18.506 16.87 33.692 12.378l270.685-80.058c18.033-5.4 26.723-22.822 18.46-40.506z"
+                      />
+                    </svg>
+                    <i className="devicon-express-original"></i>
+                    <i className="devicon-nodejs-plain colored"></i>
+                    <i className="devicon-angularjs-plain colored"></i>
+                    <i className="devicon-typescript-plain colored"></i>
+                    <i className="devicon-jest-plain colored"></i>
+                  </p>
+                  <p className="projects-description">TBD.</p>
+                  <div className="projects-links">
+                    <a
+                      href="https://github.com/JasonCqq/link-saver"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      LIVE APP
+                    </a>
+                    <a
+                      href="https://github.com/JasonCqq/link-saver"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GITHUB
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               <div className="projects-item">
                 <iframe
                   width="560"
@@ -185,6 +271,7 @@ function App() {
                   </div>
                 </div>
               </div>
+
               <div className="projects-item">
                 <iframe
                   width="560"
