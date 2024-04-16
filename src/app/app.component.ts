@@ -32,15 +32,29 @@ export class AppComponent {
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
-  projectID: number = 1;
+  nextProject(): void {
+    if (this.projectID === 2) {
+      return;
+    }
+    this.projectID++;
+  }
+
+  previousProject(): void {
+    if (this.projectID === 0) {
+      return;
+    }
+    this.projectID--;
+  }
+  projectID: number = 0;
   projects: Project[] = [
     {
       id: 0,
       title: "LinkStorage",
-      videoSrc: "https://www.youtube.com/embed/3LzCY1Fpias?si=5DOBQQrAn8PIE7oC",
-      description: "",
-      appHref: "",
-      githubHref: "",
+      videoSrc: "https://www.youtube.com/embed/HkUMs601Ak0?si=c12NkK2xfN8A9EQR",
+      description:
+        "Linkstorage is a web app to store links you want to revisit. You can even share your folders to the world. Check one out here: linkstorage.net/public/1. Linkstorage provides many features such as Rich Previews, Folders, Searching, Sharing, Mass editing, Bookmarks and more...",
+      appHref: "https://linkstorage.net",
+      githubHref: "https://github.com/JasonCqq/link-saver",
       iconsHTML: `
       <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" />
       <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" />
@@ -55,8 +69,8 @@ export class AppComponent {
       videoSrc: "https://www.youtube.com/embed/J5s9PAta4V0",
       description:
         "minBlog is a reading platform, and a blog sharing platform with short ~1500chars) blogs. With features like REST API, secure authentication with bcrypt, passport/sessions along with blog searching, filtering, and pagination",
-      appHref: "",
-      githubHref: "",
+      appHref: "https://minblog21715.netlify.app/",
+      githubHref: "https://github.com/JasonCqq/minBlog",
       iconsHTML: `
       <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
       <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
@@ -71,8 +85,8 @@ export class AppComponent {
       videoSrc: "https://www.youtube.com/embed/hJ5OKDj8ZxE",
       description:
         "Jwitter is a Twitter clone that replicates the core features of Twitter such as realtime tweets, follow system, and likes. This project was developed from scratch without relying on tutorials to practice full stack skills.",
-      appHref: "",
-      githubHref: "",
+      appHref: "https://main--chipper-gnome-4de1e9.netlify.app/",
+      githubHref: "https://github.com/JasonCqq/Jwitter",
       iconsHTML: `
       <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
       <img  width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />           

@@ -1,11 +1,7 @@
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
-/>
 <main>
   <div class="main-left">
     <section id="landing">
-      <h1 class="landing-title">Jaaaa Haaaa</h1>
+      <h1 class="landing-title">Jason Huang</h1>
       <h2>Fullstack Web Developer</h2>
       <h2>San Francisco</h2>
       <div class="landing-links">
@@ -49,11 +45,7 @@
       >
         > Resume
       </p>
-      <a
-        style="font-size: 1rem; color: rgba(255, 255, 255, 0.5)"
-        href="https://linkstorage.net"
-        target="_blank"
-      >
+      <a href="https://linkstorage.net" target="_blank">
         > Check out my web app <br />Linkstorage.net
       </a>
     </nav>
@@ -70,7 +62,10 @@
             height="315"
             [src]="safeUrl(project.videoSrc)"
             title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
           ></iframe>
 
           <div
@@ -102,8 +97,24 @@
         </div>
       </div>
 
-      <mat-icon fontIcon="expand_more"></mat-icon>
-      <mat-icon fontIcon="expand_less"></mat-icon>
+      <div class="projects-nav-cont">
+        <span>
+          Previous
+          <mat-icon
+            fontIcon="expand_less"
+            class="projects-nav"
+            (click)="previousProject()"
+          ></mat-icon>
+        </span>
+        <span>
+          <mat-icon
+            fontIcon="expand_more"
+            class="projects-nav"
+            (click)="nextProject()"
+          ></mat-icon>
+          Next Project
+        </span>
+      </div>
     </section>
 
     <section id="contact" *ngIf="tab === 'Contact'">

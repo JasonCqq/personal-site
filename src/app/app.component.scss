@@ -38,6 +38,14 @@ main {
         display: flex;
         gap: 1vw;
         padding-bottom: 3vh;
+
+        > a {
+          transition: color 0.15s ease-in-out;
+          &:hover {
+            color: $accent;
+            cursor: var(--cursorPointer);
+          }
+        }
       }
     }
 
@@ -53,15 +61,16 @@ main {
         font-weight: 700;
         font-size: 1.25rem;
 
+        transition: transform 0.15s ease-in-out;
         &:hover {
           cursor: var(--cursorPointer);
           color: $accent;
+          transform: scale(1.1);
         }
       }
 
       .active-tab {
         color: $accent;
-        font-size: 1.6rem;
       }
     }
   }
@@ -74,11 +83,15 @@ main {
     margin-left: 20vw;
 
     > #projects {
+      display: flex;
+
       > div {
         > .projects-item {
+          animation: fadeIn 0.5s ease-in-out forwards;
           margin-left: 10vw;
           display: flex;
           flex-direction: column;
+          width: 40vw;
 
           > .projects-title {
             font-size: 2rem;
@@ -103,17 +116,23 @@ main {
             margin-top: 5vh;
 
             > a {
-              border: 2px solid $accent;
+              border: 3px solid $accent;
               border-radius: 5px;
               padding: 10px 0px;
               width: 125px;
               font-weight: 600;
               text-align: center;
+              transition: background-color 0.15s ease-in-out;
+
+              &:hover {
+                background-color: $accent;
+                cursor: var(--cursorPointer);
+              }
             }
           }
 
           > .projects-description {
-            width: 50%;
+            width: 75%;
             margin-top: 5vh;
 
             > p {
@@ -128,9 +147,38 @@ main {
           }
         }
       }
+
+      > .projects-nav-cont {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        margin-top: 10vh;
+        font-weight: 600;
+
+        > span {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2vh;
+          > .projects-nav {
+            transform: scale(1.5);
+            border: 2px solid $accent;
+            border-radius: 50px;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+              background-color: $accent;
+              cursor: var(--cursorPointer);
+            }
+          }
+        }
+      }
     }
 
     > #contact {
+      animation: fadeIn 0.5s ease-in-out forwards;
+
       display: flex;
       flex-direction: column;
       margin-left: 10vw;
@@ -220,13 +268,15 @@ main {
     }
 
     > #resume {
+      animation: fadeIn 0.5s ease-in-out forwards;
+
       margin-left: 10vw;
       display: flex;
       flex-direction: column;
       gap: 2vh;
 
       > iframe {
-        height: 75vh;
+        height: 80vh;
         width: 700px;
         border: none;
         border-radius: 5px;
@@ -235,14 +285,30 @@ main {
       }
 
       > a {
-        border: 2px solid $accent;
+        border: 3px solid $accent;
         border-radius: 10px;
         padding: 10px 25px;
         width: 125px;
         text-align: center;
         font-weight: 600;
+        transition: background-color 0.15s ease-in-out;
+        &:hover {
+          background-color: $accent;
+          cursor: var(--cursorPointer);
+        }
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
