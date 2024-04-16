@@ -1,0 +1,168 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+/>
+<main>
+  <div class="main-left">
+    <section id="landing">
+      <h1 class="landing-title">Jaaaa Haaaa</h1>
+      <h2>Fullstack Web Developer</h2>
+      <h2>San Francisco</h2>
+      <div class="landing-links">
+        <a
+          href="https://github.com/JasonCqq"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Profile"
+        >
+          <i class="fa-brands fa-github" style="font-size: 2rem"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/jason-huang-38813324b/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Linkedin Profile"
+        >
+          <i class="fa-brands fa-linkedin-in" style="font-size: 2rem"> </i>
+        </a>
+      </div>
+    </section>
+
+    <nav>
+      <p
+        [ngClass]="tab === 'Projects' ? 'active-tab' : ''"
+        (click)="switchTab('Projects')"
+      >
+        > Projects
+      </p>
+      <p
+        [ngClass]="tab === 'Contact' ? 'active-tab' : ''"
+        (click)="switchTab('Contact')"
+      >
+        > Contact
+      </p>
+
+      <p
+        [ngClass]="tab === 'Resume' ? 'active-tab' : ''"
+        (click)="switchTab('Resume')"
+      >
+        > Resume
+      </p>
+      <a
+        style="font-size: 1rem; color: rgba(255, 255, 255, 0.5)"
+        href="https://linkstorage.net"
+        target="_blank"
+      >
+        > Check out my web app <br />Linkstorage.net
+      </a>
+    </nav>
+  </div>
+
+  <section class="main-content">
+    <section id="projects" *ngIf="tab === 'Projects'">
+      <div *ngFor="let project of projects">
+        <div class="projects-item" *ngIf="project.id === projectID">
+          <h1 class="projects-title">Project - {{ project.title }}</h1>
+
+          <iframe
+            width="560"
+            height="315"
+            [src]="safeUrl(project.videoSrc)"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+          ></iframe>
+
+          <div
+            class="projects-tech"
+            [innerHTML]="safe(project.iconsHTML)"
+          ></div>
+
+          <div class="projects-links">
+            <a
+              [href]="safeUrl(project.appHref)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LIVE APP
+            </a>
+            <a
+              [href]="safeUrl(project.githubHref)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GITHUB
+            </a>
+          </div>
+
+          <div class="projects-description">
+            <h1>App Description</h1>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <mat-icon fontIcon="expand_more"></mat-icon>
+      <mat-icon fontIcon="expand_less"></mat-icon>
+    </section>
+
+    <section id="contact" *ngIf="tab === 'Contact'">
+      <h1>Contact</h1>
+      <form
+        action="https://formsubmit.co/jason.cq.huang@gmail.com"
+        method="POST"
+        class="contact-form"
+      >
+        <div class="contact-flex">
+          <div class="contact-name">
+            <input type="text" id="name" name="name" required />
+            <label htmlFor="name">NAME</label>
+          </div>
+          <div class="contact-name">
+            <input type="email" id="email" name="email" required />
+            <label htmlFor="email">EMAIL</label>
+          </div>
+        </div>
+
+        <div>
+          <input type="text" id="subject" name="subject" required />
+          <label htmlFor="subject">SUBJECT</label>
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <textarea id="message" name="message" required></textarea>
+          <label htmlFor="message">MESSAGE</label>
+        </div>
+
+        <button class="message-button" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <div id="resume" *ngIf="tab === 'Resume'">
+      <iframe
+        title="Resume"
+        src="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub?embedded=true"
+      ></iframe>
+
+      <a
+        class="resumeDownload resumeClose"
+        href="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Resume on Google Docs"
+      >
+        Open on Docs
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a
+    href="https://github.com/JasonCqq/personal-site"
+    target="_blank"
+    aria-label="Site Source Code"
+  >
+    Code available on GitHub
+  </a>
+</footer>

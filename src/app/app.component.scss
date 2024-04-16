@@ -1,0 +1,266 @@
+@import "../styles.scss";
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .main-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    padding-top: 5vh;
+    margin-left: 3vw;
+    position: absolute;
+    width: 20vw;
+
+    #landing {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: auto;
+
+      border-bottom: 5px solid $accent;
+
+      > .landing-title {
+        font-size: 2rem;
+        color: $accent;
+      }
+
+      > h2 {
+        font-size: 1.2rem;
+      }
+
+      > .landing-links {
+        display: flex;
+        gap: 1vw;
+        padding-bottom: 3vh;
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      background-color: $background;
+      gap: 2vw;
+      padding-top: 2vh;
+
+      > a,
+      p {
+        font-weight: 700;
+        font-size: 1.25rem;
+
+        &:hover {
+          cursor: var(--cursorPointer);
+          color: $accent;
+        }
+      }
+
+      .active-tab {
+        color: $accent;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .main-content {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    padding-top: 5vh;
+    margin-left: 20vw;
+
+    > #projects {
+      > div {
+        > .projects-item {
+          margin-left: 10vw;
+          display: flex;
+          flex-direction: column;
+
+          > .projects-title {
+            font-size: 2rem;
+            padding-bottom: 5vh;
+          }
+
+          > .projects-tech {
+            > img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          > iframe {
+            border: none;
+            box-shadow: 1px 1px 10px black;
+          }
+
+          > .projects-links {
+            display: flex;
+            gap: 2vw;
+            margin-top: 5vh;
+
+            > a {
+              border: 2px solid $accent;
+              border-radius: 5px;
+              padding: 10px 0px;
+              width: 125px;
+              font-weight: 600;
+              text-align: center;
+            }
+          }
+
+          > .projects-description {
+            width: 50%;
+            margin-top: 5vh;
+
+            > p {
+              margin-top: 10px;
+            }
+          }
+
+          > .projects-tech {
+            margin-top: 3vh;
+            display: flex;
+            gap: 2vw;
+          }
+        }
+      }
+    }
+
+    > #contact {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10vw;
+
+      > h1 {
+        color: white;
+
+        font-size: 2rem;
+
+        width: fit-content;
+      }
+
+      > .contact-form {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        margin-top: 5vh;
+
+        > .contact-flex {
+          display: flex;
+          gap: 4vw;
+
+          > .contact-name {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        label {
+          font-weight: bold;
+          font-size: 0.75rem;
+          padding-left: 5px;
+          padding-top: 5px;
+        }
+
+        input {
+          background: none;
+          border: none;
+          width: 100%;
+          color: white;
+          font-size: 1.1rem;
+          font-weight: bold;
+          padding-bottom: 10px;
+          border-bottom: 3px solid $accent;
+          background: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        textarea {
+          font-family: inherit;
+          resize: none;
+          color: white;
+          height: 20vh;
+          background: transparent;
+          border: 3px solid $accent;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 1.1rem;
+          padding: 5px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        > .message-button {
+          width: 100%;
+          color: white;
+          border: 3px solid $accent;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 1.15rem;
+          padding: 15px 15px;
+          margin-top: 1vh;
+          background-color: $background;
+          transition: background-color 0.1s ease-in-out;
+          &:hover {
+            background-color: $accent;
+            cursor: var(--cursorPointer);
+          }
+        }
+      }
+    }
+
+    > #resume {
+      margin-left: 10vw;
+      display: flex;
+      flex-direction: column;
+      gap: 2vh;
+
+      > iframe {
+        height: 75vh;
+        width: 700px;
+        border: none;
+        border-radius: 5px;
+        border: 3px solid $accent;
+        padding: 0;
+      }
+
+      > a {
+        border: 2px solid $accent;
+        border-radius: 10px;
+        padding: 10px 25px;
+        width: 125px;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  margin-left: 5px;
+
+  > a {
+    color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      cursor: var(--cursorPointer);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
