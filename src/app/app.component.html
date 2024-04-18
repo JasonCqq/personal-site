@@ -1,3 +1,4 @@
+<div class="gradient"></div>
 <main>
   <div class="main-left">
     <section id="landing">
@@ -32,11 +33,12 @@
       >
         > Projects
       </p>
+
       <p
         [ngClass]="tab === 'Contact' ? 'active-tab' : ''"
         (click)="switchTab('Contact')"
       >
-        > Contact
+        > Skills & Contact
       </p>
 
       <p
@@ -45,17 +47,20 @@
       >
         > Resume
       </p>
-      <a href="https://linkstorage.net" target="_blank">
-        > Check out my web app <br />Linkstorage.net
-      </a>
+
+      <div>
+        <a href="https://linkstorage.net" target="_blank">
+          Check out Linkstorage.net
+        </a>
+      </div>
     </nav>
   </div>
 
   <section class="main-content">
-    <section id="projects" *ngIf="tab === 'Projects'">
+    <section id="projects" *ngIf="tab === 'Projects' || showComponent">
       <div *ngFor="let project of projects">
         <div class="projects-item" *ngIf="project.id === projectID">
-          <h1 class="projects-title">Project - {{ project.title }}</h1>
+          <h1 class="projects-title">{{ project.title }}</h1>
 
           <iframe
             width="560"
@@ -68,10 +73,17 @@
             allowfullscreen
           ></iframe>
 
-          <div
-            class="projects-tech"
-            [innerHTML]="safe(project.iconsHTML)"
-          ></div>
+          <p style="margin-top: 2vh">Built w/</p>
+          <div class="projects-tech">
+            <p class="projects-tech-tag" *ngFor="let tech of project.iconsHTML">
+              {{ tech }}
+            </p>
+          </div>
+
+          <div class="projects-description">
+            <h1>App Description</h1>
+            <p>{{ project.description }}</p>
+          </div>
 
           <div class="projects-links">
             <a
@@ -89,22 +101,17 @@
               GITHUB
             </a>
           </div>
-
-          <div class="projects-description">
-            <h1>App Description</h1>
-            <p>{{ project.description }}</p>
-          </div>
         </div>
       </div>
 
       <div class="projects-nav-cont">
         <span>
-          Previous
           <mat-icon
             fontIcon="expand_less"
             class="projects-nav"
             (click)="previousProject()"
           ></mat-icon>
+          Previous
         </span>
         <span>
           <mat-icon
@@ -117,39 +124,177 @@
       </div>
     </section>
 
-    <section id="contact" *ngIf="tab === 'Contact'">
-      <h1>Contact</h1>
-      <form
-        action="https://formsubmit.co/jason.cq.huang@gmail.com"
-        method="POST"
-        class="contact-form"
-      >
-        <div class="contact-flex">
-          <div class="contact-name">
-            <input type="text" id="name" name="name" required />
-            <label htmlFor="name">NAME</label>
+    <section id="contact" *ngIf="tab === 'Contact' || showComponent">
+      <div class="skills-container">
+        <div class="skills-section">
+          <h1>My skills</h1>
+          <h2>Front-End</h2>
+
+          <div class="skills-flex">
+            <div class="skills-item">
+              <img
+                alt="Angular"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                width="50"
+              />
+              <p>Angular</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="Typescript"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                width="50"
+              />
+              <p>Typescript</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="Javascript"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                width="50"
+              />
+              <p>Javascript</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="React"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                width="50"
+              />
+              <p>React</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="HTML5"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                width="50"
+              />
+              <p>HTML</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="SASS"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                width="50"
+              />
+              <p>SCSS</p>
+            </div>
           </div>
-          <div class="contact-name">
-            <input type="email" id="email" name="email" required />
-            <label htmlFor="email">EMAIL</label>
+        </div>
+
+        <div class="skills-section">
+          <h2>Back-End</h2>
+
+          <div class="skills-flex">
+            <div class="skills-item">
+              <img
+                alt="PostgreSQL"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                width="50"
+              />
+              <p>PostgreSQL</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="Prisma ORM"
+                src="https://img.icons8.com/color/48/prisma-orm.png"
+                width="50"
+              />
+              <p>Prisma</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="Express"
+                src="https://devicon-website.vercel.app/api/express/original.svg?color=%23FFFFFF"
+                width="50"
+              />
+
+              <p>Express</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="NodeJS"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                width="50"
+              />
+              <p>Node</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="MongoDB"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+                width="50"
+              />
+              <p>Mongoose</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="Firebase"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg"
+                width="50"
+              />
+              <p>Firebase</p>
+            </div>
+
+            <div class="skills-item">
+              <img
+                alt="Git"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                width="50"
+              />
+              <p>Git</p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div>
-          <input type="text" id="subject" name="subject" required />
-          <label htmlFor="subject">SUBJECT</label>
-        </div>
+      <section class="contact-contain">
+        <h1>Contact Me</h1>
+        <form
+          action="https://formsubmit.co/jason.cq.huang@gmail.com"
+          method="POST"
+          class="contact-form"
+        >
+          <div class="contact-flex">
+            <div class="contact-name">
+              <input type="text" id="name" name="name" required />
+              <label htmlFor="name">NAME</label>
+            </div>
+            <div class="contact-name">
+              <input type="email" id="email" name="email" required />
+              <label htmlFor="email">EMAIL</label>
+            </div>
+          </div>
 
-        <div style="display: flex; flex-direction: column">
-          <textarea id="message" name="message" required></textarea>
-          <label htmlFor="message">MESSAGE</label>
-        </div>
+          <div>
+            <input type="text" id="subject" name="subject" required />
+            <label htmlFor="subject">SUBJECT</label>
+          </div>
 
-        <button class="message-button" type="submit">Send Message</button>
-      </form>
+          <div style="display: flex; flex-direction: column">
+            <textarea id="message" name="message" required></textarea>
+            <label htmlFor="message">MESSAGE</label>
+          </div>
+
+          <button class="message-button" type="submit">Send Message</button>
+        </form>
+      </section>
     </section>
 
-    <div id="resume" *ngIf="tab === 'Resume'">
+    <section id="resume" *ngIf="tab === 'Resume' || showComponent">
+      <h1 *ngIf="showComponent">
+        My Resume <span style="color: gray">(Visible above 600px)</span>
+      </h1>
       <iframe
         title="Resume"
         src="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub?embedded=true"
@@ -162,9 +307,9 @@
         rel="noopener noreferrer"
         aria-label="Resume on Google Docs"
       >
-        Open on Docs
+        Open on Google Docs
       </a>
-    </div>
+    </section>
   </section>
 </main>
 

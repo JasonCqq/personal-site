@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
-import { DomSanitizer, SafeHtml, SafeUrl } from "@angular/platform-browser";
+import { Component, OnInit } from "@angular/core";
+import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
+import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 
 interface Project {
   id: number;
@@ -8,7 +9,7 @@ interface Project {
   videoSrc: string;
   appHref: string;
   githubHref: string;
-  iconsHTML: string;
+  iconsHTML: string[];
 }
 
 @Component({
@@ -16,22 +17,41 @@ interface Project {
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent {
-  constructor(private sanitizer: DomSanitizer) {}
+export class AppComponent implements OnInit {
+  constructor(
+    private sanitizer: DomSanitizer,
+    public breakpointObserver: BreakpointObserver
+  ) {}
 
+  public showComponent: boolean = false;
+  // Show components if width < 1030px
+
+  ngOnInit(): void {
+    this.breakpointObserver
+      .observe([Breakpoints.XSmall, Breakpoints.Small])
+      .subscribe((state) => {
+        const breakpoints = state.breakpoints;
+
+        if (breakpoints[Breakpoints.Small] || breakpoints[Breakpoints.XSmall]) {
+          this.showComponent = true;
+        } else {
+          this.showComponent = false;
+        }
+      });
+  }
+
+  // Allow Urls
+  safeUrl(url: string): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  // Navigation
   tab: string = "Projects";
   switchTab(tabName: string): void {
     this.tab = tabName;
   }
 
-  safeUrl(url: string): SafeUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
-
-  safe(html: string): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(html);
-  }
-
+  // Projects navigation
   nextProject(): void {
     if (this.projectID === 2) {
       return;
@@ -45,24 +65,30 @@ export class AppComponent {
     }
     this.projectID--;
   }
+
+  // Projects
   projectID: number = 0;
   projects: Project[] = [
     {
       id: 0,
       title: "LinkStorage",
-      videoSrc: "https://www.youtube.com/embed/HkUMs601Ak0?si=c12NkK2xfN8A9EQR",
+      videoSrc: "https://www.youtube.com/embed/HkUMs601Ak0?si=2nFLi0kP850Dk7Uz",
       description:
         "Linkstorage is a web app to store links you want to revisit. You can even share your folders to the world. Check one out here: linkstorage.net/public/1. Linkstorage provides many features such as Rich Previews, Folders, Searching, Sharing, Mass editing, Bookmarks and more...",
       appHref: "https://linkstorage.net",
       githubHref: "https://github.com/JasonCqq/link-saver",
-      iconsHTML: `
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" />
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" />
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-      <img  width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />           
-      `,
+      iconsHTML: [
+        "Angular",
+        "PostgreSQL",
+        "Prisma",
+        "Express",
+        "Node",
+        "Typescript",
+        "HTML",
+        "SCSS",
+      ],
     },
+
     {
       id: 1,
       title: "minBlog",
@@ -71,13 +97,7 @@ export class AppComponent {
         "minBlog is a reading platform, and a blog sharing platform with short ~1500chars) blogs. With features like REST API, secure authentication with bcrypt, passport/sessions along with blog searching, filtering, and pagination",
       appHref: "https://minblog21715.netlify.app/",
       githubHref: "https://github.com/JasonCqq/minBlog",
-      iconsHTML: `
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-      <img  width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />           
-      `,
+      iconsHTML: ["React", "MongoDB", "Express", "Node", "Typescript"],
     },
     {
       id: 2,
@@ -87,11 +107,7 @@ export class AppComponent {
         "Jwitter is a Twitter clone that replicates the core features of Twitter such as realtime tweets, follow system, and likes. This project was developed from scratch without relying on tutorials to practice full stack skills.",
       appHref: "https://main--chipper-gnome-4de1e9.netlify.app/",
       githubHref: "https://github.com/JasonCqq/Jwitter",
-      iconsHTML: `
-      <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-      <img  width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />           
-      <img  width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" />
-      `,
+      iconsHTML: ["React", "Typescript", "Firebase"],
     },
   ];
 }
