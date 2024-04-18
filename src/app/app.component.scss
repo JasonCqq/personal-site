@@ -163,7 +163,7 @@ main {
 
           > .projects-title {
             font-size: 2rem;
-            padding-bottom: 5vh;
+            padding-bottom: 2vh;
           }
 
           > iframe {
@@ -179,7 +179,7 @@ main {
           > .projects-links {
             display: flex;
             gap: 2vw;
-            padding-top: 5vh;
+            padding-top: 3vh;
 
             @media screen and (max-width: 350px) {
               padding-top: 15vh;
@@ -301,7 +301,7 @@ main {
       margin-left: 15vw;
       height: auto;
       padding-right: 5vw;
-      gap: 50px;
+      gap: 10px;
 
       @media screen and (max-width: 958.98px) {
         padding-right: 0vw;
@@ -382,9 +382,6 @@ main {
       }
 
       > .contact-contain {
-        margin-top: auto;
-        margin-bottom: 7vh;
-
         @media screen and (max-width: 958.98px) {
           margin-bottom: 0vh;
           padding-top: 6vh;
@@ -496,8 +493,8 @@ main {
 
       > iframe {
         height: 80vh;
-        max-width: 50vw;
-        min-width: 50vw;
+        max-width: 45vw;
+        min-width: 45vw;
         border: none;
         border-radius: 5px;
         border: 3px solid $accent;
