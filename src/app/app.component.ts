@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 
 interface Project {
   id: number;
@@ -16,16 +17,19 @@ interface Project {
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private sanitizer: DomSanitizer) {}
 
-  // Projects
-  // https://www.youtube.com/embed/HkUMs601Ak0?si=2nFLi0kP850Dk7Uz
+  // Allow Urls
+  safeUrl(url: string): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
   projectID: number = 0;
   projects: Project[] = [
     {
       id: 0,
       title: "LinkStorage",
-      videoSrc: "",
+      videoSrc: "https://www.youtube.com/embed/HkUMs601Ak0?si=2nFLi0kP850Dk7Uz",
       description:
         "Linkstorage is a web app to store links you want to revisit. You can even share your folders to the world. Check one out here: linkstorage.net/public/1. Linkstorage provides many features such as Rich Previews, Folders, Searching, Sharing, Mass editing, Bookmarks and more...",
       appHref: "https://linkstorage.net",

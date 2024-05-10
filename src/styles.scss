@@ -1,26 +1,33 @@
-$background: #121212;
+@font-face {
+  font-family: "Mona Sans";
+  src: url("./assets/Mona-Sans.woff2");
+}
+
+$background: #070707;
+$text: #e6e8e3;
+$textSec: #c1c9df;
 $accent: #237bff;
 
 html {
   scroll-behavior: smooth;
   background-color: $background;
-  font-family: "REM", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  color: #e6e8e3;
+  font-family: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  color: $text;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   scroll-behavior: smooth;
   background-color: $background;
 }
 
 code {
-  font-family: "REM", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Mona Sans", source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
 }
 
 // Custom Text Highlight Color
@@ -33,25 +40,13 @@ code {
 
 // Custom Scrollbar
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 ::-webkit-scrollbar-track {
   background: $background;
 }
 ::-webkit-scrollbar-thumb {
-  background: $accent;
-  &:hover {
-    background: $accent;
-  }
-}
-
-body,
-input,
-textarea,
-button {
-  font-family: "REM", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background: $text;
 }
 
 // CSS Reset
@@ -78,10 +73,15 @@ ol {
 }
 a {
   text-decoration: none;
-  color: #e6e8e3;
+  color: $text;
 }
-input {
-  color: #e6e8e3;
+input,
+textarea {
+  color: $text;
+  font-family: "Mona Sans";
+}
+button {
+  font-family: "Mona Sans";
 }
 
 html,
