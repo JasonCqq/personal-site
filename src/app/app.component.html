@@ -1,48 +1,49 @@
 <main>
-  <nav>
-    <p>Work</p>
+  <!-- <nav>
+    <a href="#projects">Work</a>
 
-    <p>Contact</p>
+    <a href="#contact">Contact</a>
 
-    <p>Resume <span class="material-icons"> file_download </span></p>
-  </nav>
+    <a
+      href="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub"
+      target="_blank"
+      >Resume <span class="material-icons"> north_east </span></a
+    >
+  </nav> -->
 
-  <section id="land">
+  <!-- <section id="land">
     <div class="land-cont">
       <h1 class="land-name">
-        Hello <br />
+        <span style="color: #f5cb5c">Hello</span> <br />
         I am Jason
       </h1>
       <h2>Fullstack Developer</h2>
+      <div class="land-links">
+        <a
+          href="https://github.com/JasonCqq"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Profile"
+        >
+          <i class="fa-brands fa-github" style="font-size: 2.2rem"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/jason-huang-38813324b/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Linkedin Profile"
+        >
+          <i class="fa-brands fa-linkedin-in" style="font-size: 2.25rem"> </i>
+        </a>
+      </div>
     </div>
+  </section> -->
 
-    <div class="land-links">
-      <a
-        href="https://github.com/JasonCqq"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub Profile"
-      >
-        <i class="fa-brands fa-github" style="font-size: 2.5rem"></i>
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/jason-huang-38813324b/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Linkedin Profile"
-      >
-        <i class="fa-brands fa-linkedin-in" style="font-size: 2.5rem"> </i>
-      </a>
-    </div>
-  </section>
-
-  <div class="skills-container">
+  <!-- <div class="skills-container">
     <h1>SKILLS</h1>
 
     <div class="skills-flex">
-      <span class="material-icons"> arrow_back_ios_new </span>
-
       <div class="skills-item">
         <img
           alt="Angular"
@@ -96,13 +97,9 @@
         />
         <p>SCSS</p>
       </div>
-
-      <span class="material-icons"> arrow_forward_ios </span>
     </div>
 
     <div class="skills-flex">
-      <span class="material-icons"> arrow_back_ios_new </span>
-
       <div class="skills-item">
         <img
           alt="PostgreSQL"
@@ -166,18 +163,43 @@
         />
         <p>Git</p>
       </div>
-
-      <span class="material-icons"> arrow_forward_ios </span>
     </div>
-  </div>
+  </div> -->
 
-  <section id="projects">
-    <h1>WORK</h1>
-    <div *ngFor="let project of projects">
-      <div class="projects-item">
-        <h1 class="projects-title">{{ project.title }}</h1>
+  <!-- <section id="projects">
+    <h1>WORK <span class="material-icons"> south_east </span></h1>
 
-        <!-- <iframe
+    <div class="projects-item" *ngFor="let project of projects">
+      <h1 class="projects-title">{{ project.title }}</h1>
+
+      <div class="projects-body">
+        <div class="projects-buttons">
+          <a>Live App</a>
+          <a>Github</a>
+          <button>Show Demo</button>
+          <button>Description</button>
+        </div>
+
+        <div class="projects-image">
+          <img [src]="project.image" />
+
+          <div class="projects-tech">
+            <p *ngFor="let tech of project.iconsHTML">
+              {{ tech }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <a href="https://github.com/JasonCqq?tab=repositories" target="_blank"
+      >View more <span class="material-icons"> arrow_forward </span></a
+    >
+  </section> -->
+
+  <!-- <iframe
           width="560"
           height="315"
           [src]="safeUrl(project.videoSrc)"
@@ -188,36 +210,24 @@
           allowfullscreen
         ></iframe> -->
 
-        <!-- <p style="margin-top: 2vh">Built w/</p>
-        <div class="projects-tech">
-          <p class="projects-tech-tag" *ngFor="let tech of project.iconsHTML">
-            {{ tech }}
-          </p>
-        </div>
+  <!--
 
         <div class="projects-description">
           <h1>App Description</h1>
           <p>{{ project.description }}</p>
         </div>
+         -->
 
-        <div class="projects-links">
-          <a [href]="project.appHref" target="_blank" rel="noopener noreferrer">
-            LIVE APP
-          </a>
-          <a
-            [href]="project.githubHref"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GITHUB
-          </a> -->
-        <!-- </div> -->
-      </div>
-    </div>
-  </section>
+  <!-- <section id="contact">
+    <h1>
+      Have a question? <br />
+      Interested in working with me? <br />
+      Send me a message
 
-  <section id="contact">
-    <h1>Send me a message</h1>
+      <br />
+      or Email me directly: <br />
+      <span style="color: #f5cb5c">jasonh21715&#64;gmail.com</span>
+    </h1>
 
     <form
       action="https://formsubmit.co/jason.cq.huang@gmail.com"
@@ -245,10 +255,10 @@
 
       <button class="message-button" type="submit">Send Message</button>
     </form>
-  </section>
+  </section> -->
 </main>
 
-<footer>
+<!-- <footer>
   <a
     href="https://github.com/JasonCqq/personal-site"
     target="_blank"
@@ -257,4 +267,4 @@
     Code available on GitHub
     <span class="material-icons"> north_east </span>
   </a>
-</footer>
+</footer> -->

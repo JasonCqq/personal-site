@@ -4,19 +4,57 @@ main {
   display: flex;
   flex-direction: column;
   height: auto;
+  width: 100vw;
 
   > nav {
     display: flex;
     position: fixed;
     top: 0;
-    right: 0;
-    gap: 4vw;
-    margin-right: 5vw;
-    margin-top: 25px;
+    width: 100vw;
+    background-color: $background;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
 
-    > p {
-      font-size: 2rem;
+    @media screen and (max-width: 535px) {
+      justify-content: center;
+      padding-left: 10px;
+    }
+
+    > a {
+      font-size: 1.6rem;
       font-weight: 600;
+      margin-right: 3vw;
+      padding: 20px 10px;
+      letter-spacing: 2px;
+
+      transition: color 0.1s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        color: $accent;
+      }
+
+      display: flex;
+      align-items: center;
+
+      > .material-icons {
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 535px) {
+        margin-right: 0;
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-width: 405px) {
+        margin-right: 0;
+        font-size: 1.15rem;
+        padding: 20px 5px;
+
+        > .material-icons {
+          font-size: 1.15rem;
+        }
+      }
     }
   }
 
@@ -24,12 +62,13 @@ main {
     height: 40vh;
     width: fit-content;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
     margin-top: 20vh;
-    margin-left: 20vw;
+    gap: 10vw;
 
     > .land-cont {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20vw;
       > .land-name {
         font-size: 5rem;
         font-weight: bold;
@@ -41,18 +80,42 @@ main {
         letter-spacing: 1px;
         padding-left: 25px;
       }
+
+      > .land-links {
+        display: flex;
+        gap: 1.5vw;
+        margin-left: auto;
+        margin-top: 20px;
+
+        > a {
+          transition: color 0.1s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            color: $accent;
+          }
+        }
+      }
     }
 
-    > .land-links {
+    > .land-about {
       display: flex;
-      gap: 1vw;
-      margin-left: auto;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.5;
+
+      > section {
+        border: 1px solid gray;
+        border-radius: 250%;
+        padding: 15px;
+        font-weight: 600;
+        font-size: 2.5rem;
+      }
     }
   }
 
   > .skills-container {
-    height: 30vh;
-    width: 100vw;
+    height: 40vh;
+    width: 95vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,11 +130,15 @@ main {
       display: flex;
       align-content: center;
       justify-content: center;
-      gap: 1.25vw;
+      gap: 2vw;
       text-align: center;
 
       > .skills-item {
-        opacity: 0.7;
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+        }
 
         > p {
           color: $textSec;
@@ -88,20 +155,122 @@ main {
   }
 
   > #projects {
-    > iframe {
-      background-color: white;
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15vh;
+
+    > h1 {
+      font-size: 4rem;
+      align-self: flex-start;
+      margin-left: 15vw;
+      z-index: 3;
+      color: $accent;
+      letter-spacing: 5px;
+      display: flex;
+      align-items: center;
+
+      > .material-icons {
+        font-size: 4rem;
+      }
+    }
+
+    > .projects-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4vh;
+
+      > h1 {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+      }
+
+      > .projects-body {
+        display: flex;
+
+        > .projects-image {
+          > img {
+            width: 900px;
+            height: 500px;
+            border-radius: 5px;
+          }
+
+          > .projects-tech {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+
+            > p {
+              // background-color: rgba($accent, 0.5);
+              // border-radius: 5px;
+              // padding: 10px;
+              font-size: 1rem;
+              font-weight: bold;
+              padding-bottom: 4px;
+              border-bottom: 3px solid $accent;
+            }
+          }
+        }
+
+        > .projects-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          margin-right: 15px;
+
+          > * {
+            border: none;
+            background-color: transparent;
+            color: $accent;
+            border: 2px solid $accent;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 25px;
+            text-align: center;
+
+            transition: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out;
+            &:hover {
+              color: black;
+              cursor: pointer;
+              background-color: $accent;
+            }
+          }
+        }
+      }
+    }
+
+    > a {
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-bottom: 3px solid $accent;
+
+      transition: color 0.1 ease-in-out;
+      &:hover {
+        color: $accent;
+      }
+
+      > .material-icons {
+        font-size: 2rem;
+      }
     }
   }
 
   > #contact {
-    height: 70vh;
+    margin-top: 15vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5vw;
+    gap: 10vw;
 
     > .contact-form {
-      text-align: center;
       display: flex;
       flex-direction: column;
       gap: 5vh;
@@ -127,7 +296,7 @@ main {
         padding: 10px;
         font-size: 1.5rem;
         color: $text;
-        height: 100px;
+        height: 150px;
 
         &:focus {
           outline: none;
@@ -142,7 +311,20 @@ main {
         padding: 15px 25px;
         border-radius: 5px;
         font-size: 1.25rem;
+        font-weight: 600;
+
+        transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+        &:hover {
+          color: $accent;
+          cursor: pointer;
+          border-color: $accent;
+        }
       }
+    }
+
+    > h1 {
+      line-height: 50px;
+      letter-spacing: 2px;
     }
   }
 }
@@ -150,9 +332,31 @@ main {
 footer {
   position: relative;
   bottom: 0;
-  height: 10vh;
+  height: 15vh;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 500;
   color: $textSec;
+  letter-spacing: 1px;
+  margin-top: 20vh;
+
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: color 0.1s ease-in-out;
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+    font-size: 2rem;
+    height: 10vh;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 }
