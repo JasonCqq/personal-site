@@ -1,6 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
+import { Component } from "@angular/core";
 
 interface Project {
   id: number;
@@ -17,62 +15,17 @@ interface Project {
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent implements OnInit {
-  constructor(
-    private sanitizer: DomSanitizer,
-    public breakpointObserver: BreakpointObserver
-  ) {}
-
-  public showComponent: boolean = false;
-  // Show components if width < 1030px
-
-  ngOnInit(): void {
-    this.breakpointObserver
-      .observe([Breakpoints.XSmall, Breakpoints.Small])
-      .subscribe((state) => {
-        const breakpoints = state.breakpoints;
-
-        if (breakpoints[Breakpoints.Small] || breakpoints[Breakpoints.XSmall]) {
-          this.showComponent = true;
-        } else {
-          this.showComponent = false;
-        }
-      });
-  }
-
-  // Allow Urls
-  safeUrl(url: string): SafeUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
-
-  // Navigation
-  tab: string = "Projects";
-  switchTab(tabName: string): void {
-    this.tab = tabName;
-  }
-
-  // Projects navigation
-  nextProject(): void {
-    if (this.projectID === 2) {
-      return;
-    }
-    this.projectID++;
-  }
-
-  previousProject(): void {
-    if (this.projectID === 0) {
-      return;
-    }
-    this.projectID--;
-  }
+export class AppComponent {
+  constructor() {}
 
   // Projects
+  // https://www.youtube.com/embed/HkUMs601Ak0?si=2nFLi0kP850Dk7Uz
   projectID: number = 0;
   projects: Project[] = [
     {
       id: 0,
       title: "LinkStorage",
-      videoSrc: "https://www.youtube.com/embed/HkUMs601Ak0?si=2nFLi0kP850Dk7Uz",
+      videoSrc: "",
       description:
         "Linkstorage is a web app to store links you want to revisit. You can even share your folders to the world. Check one out here: linkstorage.net/public/1. Linkstorage provides many features such as Rich Previews, Folders, Searching, Sharing, Mass editing, Bookmarks and more...",
       appHref: "https://linkstorage.net",

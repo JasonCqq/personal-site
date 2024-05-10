@@ -4,6 +4,7 @@ main {
   height: auto;
   width: 100%;
   display: flex;
+  background-color: $background;
 
   @media screen and (max-width: 958.98px) {
     flex-direction: column;
@@ -554,28 +555,5 @@ footer {
       cursor: pointer;
       color: rgba(255, 255, 255, 1);
     }
-  }
-}
-
-.gradient {
-  --size: 50px;
-  --speed: 50s;
-  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
-  width: var(--size);
-  height: var(--size);
-  filter: blur(calc(var(--size) / 1));
-  background-color: $accent; /* Color of the circle */
-  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.5); /* Glow effect */
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-@media (min-width: 720px) {
-  .gradient {
-    --size: 500px;
   }
 }
