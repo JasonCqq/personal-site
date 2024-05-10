@@ -1,7 +1,5 @@
 node_modules
 node_modules/
 ./node_modules
-/.angular/cache
-.angular/cache/
-.angular/*
-.angular
+./.angular/cache
+/.angular/cache/17.3.4
