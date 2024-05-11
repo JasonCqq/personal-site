@@ -10,6 +10,8 @@ interface Project {
   appHref: string;
   githubHref: string;
   iconsHTML: string[];
+  showDesc: boolean;
+  showVid: boolean;
 }
 
 @Component({
@@ -23,6 +25,14 @@ export class AppComponent {
   // Allow Urls
   safeUrl(url: string): SafeUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  toggleVideo(id: number): void {
+    this.projects[id].showVid = !this.projects[id].showVid;
+  }
+
+  toggleDescription(id: number): void {
+    this.projects[id].showDesc = !this.projects[id].showDesc;
   }
 
   projectID: number = 0;
@@ -46,6 +56,8 @@ export class AppComponent {
         "HTML",
         "SCSS",
       ],
+      showDesc: false,
+      showVid: false,
     },
 
     {
@@ -59,6 +71,8 @@ export class AppComponent {
       appHref: "https://minblog21715.netlify.app/",
       githubHref: "https://github.com/JasonCqq/minBlog",
       iconsHTML: ["React", "MongoDB", "Express", "Node", "Typescript"],
+      showDesc: false,
+      showVid: false,
     },
     {
       id: 2,
@@ -70,6 +84,8 @@ export class AppComponent {
       appHref: "https://main--chipper-gnome-4de1e9.netlify.app/",
       githubHref: "https://github.com/JasonCqq/Jwitter",
       iconsHTML: ["React", "Typescript", "Firebase"],
+      showDesc: false,
+      showVid: false,
     },
   ];
 }

@@ -1,5 +1,5 @@
 <main>
-  <!-- <nav>
+  <nav>
     <a href="#projects">Work</a>
 
     <a href="#contact">Contact</a>
@@ -9,9 +9,9 @@
       target="_blank"
       >Resume <span class="material-icons"> north_east </span></a
     >
-  </nav> -->
+  </nav>
 
-  <!-- <section id="land">
+  <section id="land">
     <div class="land-cont">
       <h1 class="land-name">
         <span style="color: #f5cb5c">Hello</span> <br />
@@ -25,7 +25,7 @@
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
         >
-          <i class="fa-brands fa-github" style="font-size: 2.2rem"></i>
+          <i class="fa-brands fa-github" style="font-size: 2rem"></i>
         </a>
 
         <a
@@ -34,13 +34,13 @@
           rel="noopener noreferrer"
           aria-label="Linkedin Profile"
         >
-          <i class="fa-brands fa-linkedin-in" style="font-size: 2.25rem"> </i>
+          <i class="fa-brands fa-linkedin-in" style="font-size: 2rem"> </i>
         </a>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <!-- <div class="skills-container">
+  <div class="skills-container">
     <h1>SKILLS</h1>
 
     <div class="skills-flex">
@@ -143,7 +143,7 @@
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
           width="50"
         />
-        <p>Mongoose</p>
+        <p>MongoDB</p>
       </div>
 
       <div class="skills-item">
@@ -164,24 +164,32 @@
         <p>Git</p>
       </div>
     </div>
-  </div> -->
+  </div>
 
-  <!-- <section id="projects">
+  <section id="projects">
     <h1>WORK <span class="material-icons"> south_east </span></h1>
 
     <div class="projects-item" *ngFor="let project of projects">
       <h1 class="projects-title">{{ project.title }}</h1>
 
       <div class="projects-body">
-        <div class="projects-buttons">
-          <a>Live App</a>
-          <a>Github</a>
-          <button>Show Demo</button>
-          <button>Description</button>
-        </div>
-
         <div class="projects-image">
-          <img [src]="project.image" />
+          <img [src]="project.image" *ngIf="!project.showVid" />
+
+          <iframe
+            *ngIf="project.showVid"
+            [src]="safeUrl(project.videoSrc)"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <div class="projects-description" *ngIf="project.showDesc">
+            <h1>Description</h1>
+            <p>{{ project.description }}</p>
+          </div>
 
           <div class="projects-tech">
             <p *ngFor="let tech of project.iconsHTML">
@@ -189,36 +197,22 @@
             </p>
           </div>
         </div>
+
+        <div class="projects-buttons">
+          <a href="{{ project.appHref }}" target="_blank">Live App</a>
+          <a href="{{ project.githubHref }}" target="_blank">Github</a>
+          <p (click)="toggleVideo(project.id)">Show Demo</p>
+          <p (click)="toggleDescription(project.id)">Description</p>
+        </div>
       </div>
-
-
     </div>
 
     <a href="https://github.com/JasonCqq?tab=repositories" target="_blank"
       >View more <span class="material-icons"> arrow_forward </span></a
     >
-  </section> -->
+  </section>
 
-  <!-- <iframe
-          width="560"
-          height="315"
-          [src]="safeUrl(project.videoSrc)"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe> -->
-
-  <!--
-
-        <div class="projects-description">
-          <h1>App Description</h1>
-          <p>{{ project.description }}</p>
-        </div>
-         -->
-
-  <!-- <section id="contact">
+  <section id="contact">
     <h1>
       Have a question? <br />
       Interested in working with me? <br />
@@ -255,10 +249,10 @@
 
       <button class="message-button" type="submit">Send Message</button>
     </form>
-  </section> -->
+  </section>
 </main>
 
-<!-- <footer>
+<footer>
   <a
     href="https://github.com/JasonCqq/personal-site"
     target="_blank"
@@ -267,4 +261,4 @@
     Code available on GitHub
     <span class="material-icons"> north_east </span>
   </a>
-</footer> -->
+</footer>
