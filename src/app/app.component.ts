@@ -40,7 +40,7 @@ export class AppComponent {
     {
       id: 0,
       title: "LinkStorage",
-      image: "../assets/72shots_so.jpg",
+      image: "../assets/314_1x_shots_so.png",
       videoSrc: "https://www.youtube.com/embed/0C5lZlLnrcs?si=9su4ICICZM77-SvF",
       description:
         "Linkstorage is a web app to store links with screenshots/thumbnails. You can even share your folders to the world. Check one out here: (linkstorage.net/public/1). Linkstorage provides features such as Rich Previews, Folders, Searching, Sharing, Mass editing, Bookmarks and more...",
@@ -63,7 +63,7 @@ export class AppComponent {
     {
       id: 1,
       title: "minBlog",
-      image: "../assets/59shots_so.jpg",
+      image: "../assets/296_1x_shots_so.png",
       videoSrc: "https://www.youtube.com/embed/J5s9PAta4V0",
       description:
         "minBlog is a reading platform, and a blog sharing platform with short 1500 character blogs. With features like REST API, secure authentication with bcrypt, passport/sessions along with blog searching, filtering, and pagination",
@@ -77,7 +77,7 @@ export class AppComponent {
     {
       id: 2,
       title: "Jwitter",
-      image: "../assets/733shots_so.jpg",
+      image: "../assets/111_1x_shots_so.png",
       videoSrc: "https://www.youtube.com/embed/hJ5OKDj8ZxE",
       description:
         "Jwitter is a Twitter clone that replicates the core features of Twitter such as realtime tweets, follow system, and likes. This project was developed from scratch without relying on tutorials to practice full stack skills.",
