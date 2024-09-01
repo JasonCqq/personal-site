@@ -40,7 +40,7 @@ export class AppComponent {
     {
       id: 0,
       title: "LinkStorage",
-      image: "../assets/314_1x_shots_so.png",
+      image: "../assets/661shots_so.png",
       videoSrc: "https://www.youtube.com/embed/0C5lZlLnrcs?si=9su4ICICZM77-SvF",
       description:
         "Linkstorage is a web app to store links with screenshots/thumbnails. You can even share your folders to the world. Check one out here: (linkstorage.net/public/1). Linkstorage provides features such as Rich Previews, Folders, Searching, Sharing, Mass editing, Bookmarks and more...",
