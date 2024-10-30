@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Mona Sans";
-  src: url("./assets/Mona-Sans.woff2");
+  font-family: "Ubuntu Sans";
+  src: url("./assets/UbuntuSans-VariableFont_wdth\,wght.ttf");
 }
 
 $background: #000000;
@@ -11,7 +11,7 @@ $accent: #f5cb5c;
 html {
   scroll-behavior: smooth;
   background-color: $background;
-  font-family: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Ubuntu Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   color: $text;
@@ -26,7 +26,7 @@ body {
 }
 
 code {
-  font-family: "Mona Sans", source-code-pro, Menlo, Monaco, Consolas,
+  font-family: "Ubuntu Sans", source-code-pro, Menlo, Monaco, Consolas,
     "Courier New", monospace;
 }
 
@@ -78,10 +78,10 @@ a {
 input,
 textarea {
   color: $text;
-  font-family: "Mona Sans";
+  font-family: "Ubuntu Sanss";
 }
 button {
-  font-family: "Mona Sans";
+  font-family: "Ubuntu Sans";
 }
 
 html,
