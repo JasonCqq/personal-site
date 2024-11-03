@@ -6,69 +6,6 @@ main {
   height: auto;
   width: 100%;
 
-  > nav {
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: $background;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 2;
-
-    @media screen and (max-width: 535px) {
-      justify-content: center;
-      padding-left: 10px;
-    }
-
-    > a {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-right: 3vw;
-      padding: 25px 10px;
-      letter-spacing: 2px;
-
-      transition: color 0.1s ease-in-out;
-      &:hover {
-        cursor: pointer;
-        color: $accent;
-      }
-
-      display: flex;
-      align-items: center;
-
-      > .material-icons {
-        font-size: 1.6rem;
-      }
-
-      @media screen and (max-width: 535px) {
-        margin-right: 0;
-        font-size: 1.4rem;
-      }
-
-      @media screen and (max-width: 405px) {
-        margin-right: 0;
-        font-size: 1.15rem;
-        padding: 20px 5px;
-
-        > .material-icons {
-          font-size: 1rem;
-        }
-      }
-
-      @media screen and (max-width: 300px) {
-        margin-right: 5px;
-        font-size: 1rem;
-        padding: 20px 2px;
-
-        > .material-icons {
-          font-size: 1rem;
-          margin-right: 20px;
-        }
-      }
-    }
-  }
-
   > #land {
     height: 40vh;
     width: fit-content;
