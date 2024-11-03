@@ -2,8 +2,6 @@
   <nav>
     <a href="#projects">WORK</a>
 
-    <a href="#contact">CONTACT</a>
-
     <a
       href="https://docs.google.com/document/d/e/2PACX-1vTo0oEx09zJo9-S7obHrBx7yvxTHsBbfbWIrNBdzn_HPCbIyuyLqlSQS4GJtCoRF_PuZTOoOnYPJQu_/pub"
       target="_blank"
@@ -37,6 +35,13 @@
           <i class="fa-brands fa-linkedin-in" style="font-size: 2rem"> </i>
         </a>
       </div>
+
+      <a
+        class="land-mail"
+        href="m&#97;ilto&#58;j&#97;sonh%&#51;2&#37;3&#49;&#55;&#49;&#53;&#64;%&#54;&#55;mail&#46;com"
+      >
+        Contact me here</a
+      >
     </div>
   </section>
 
@@ -166,10 +171,10 @@
     </div>
   </div>
 
+  <h1 class="projects-title">
+    WORK <span class="material-icons"> south_east </span>
+  </h1>
   <section id="projects">
-    <!-- Images created from https://shots.so/-->
-    <h1>WORK <span class="material-icons"> south_east </span></h1>
-
     <div class="projects-item" *ngFor="let project of projects">
       <h1 class="projects-title">{{ project.title }}</h1>
 
@@ -200,8 +205,20 @@
         </div>
 
         <div class="projects-buttons">
-          <a href="{{ project.appHref }}" target="_blank">Live App</a>
-          <a href="{{ project.githubHref }}" target="_blank">Github</a>
+          <a *ngIf="project.id === 1">Private App</a>
+          <a *ngIf="project.id === 1">Private App</a>
+          <a
+            href="{{ project.appHref }}"
+            target="_blank"
+            *ngIf="project.id !== 1"
+            >Live App</a
+          >
+          <a
+            href="{{ project.githubHref }}"
+            target="_blank"
+            *ngIf="project.id !== 1"
+            >Github</a
+          >
           <p (click)="toggleVideo(project.id)">Show Demo</p>
           <p (click)="toggleDescription(project.id)">Description</p>
         </div>
@@ -211,45 +228,6 @@
     <a href="https://github.com/JasonCqq?tab=repositories" target="_blank"
       >View more <span class="material-icons"> arrow_forward </span></a
     >
-  </section>
-
-  <section id="contact">
-    <h1>
-      Have a question or<br />
-      interested in working with me? <br />
-      Send me a message
-
-      <br />
-      or Email me directly: <br />
-      <span style="color: #f5cb5c">jasonh21715&#64;gmail.com</span>
-    </h1>
-
-    <form
-      action="https://formsubmit.co/jason.cq.huang@gmail.com"
-      method="POST"
-      class="contact-form"
-    >
-      <h1>CONTACT</h1>
-
-      <input type="text" id="name" name="name" placeholder="name" required />
-
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="email"
-        required
-      />
-
-      <textarea
-        id="message"
-        name="message"
-        placeholder="message"
-        required
-      ></textarea>
-
-      <button class="message-button" type="submit">Send Message</button>
-    </form>
   </section>
 </main>
 
