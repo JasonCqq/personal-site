@@ -55,45 +55,34 @@ main {
         }
       }
 
-      > .land-mail {
-        font-weight: 900;
-        color: $accent;
-        font-size: 1.2rem;
-        width: fit-content;
-      }
-
       > .land-links {
         display: flex;
-        gap: 30px;
+        gap: 10px;
         margin-left: auto;
         margin-top: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-right: 10vw;
+        background: $background;
+        z-index: 2;
+        border-radius: 10px;
 
         @media screen and (max-width: 420px) {
-          gap: 20px;
+          gap: 10px;
         }
 
         > a {
           transition: color 0.1s ease-in-out;
+          background-color: #121212;
+          padding: 10px;
+          border-radius: 10px;
+
           &:hover {
             cursor: pointer;
             color: $accent;
           }
         }
-      }
-    }
-
-    > .land-about {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0.5;
-
-      > section {
-        border: 1px solid gray;
-        border-radius: 250%;
-        padding: 15px;
-        font-weight: 600;
-        font-size: 2.5rem;
       }
     }
   }
@@ -107,40 +96,31 @@ main {
     align-items: center;
     gap: 2.5vh;
 
-    > h1 {
-      letter-spacing: 2px;
-      font-weight: 900;
-      color: $accent;
-
-      @media screen and (max-width: 520px) {
-        font-size: 1.5rem;
-      }
-    }
-
     > .skills-flex {
       display: flex;
+      flex-wrap: wrap;
       align-content: center;
       justify-content: center;
       gap: 2vw;
       text-align: center;
 
       > .skills-item {
-        opacity: 0.6;
+        border-radius: 10px;
+        padding: 10px 15px;
+        background-color: #121212;
 
-        @media screen and (max-width: 510px) {
+        @media screen and (max-width: 910px) {
+          padding: 10px 10px;
           > img {
             width: 35px;
           }
         }
 
-        @media screen and (max-width: 415px) {
+        @media screen and (max-width: 610px) {
+          padding: 5px 10px;
           > img {
-            width: 25px;
+            width: 30px;
           }
-        }
-
-        &:hover {
-          opacity: 1;
         }
 
         > p {
@@ -162,191 +142,151 @@ main {
   }
 
   > .projects-title {
-    margin-top: 25vh;
-    font-size: 4rem;
-    align-self: flex-start;
-    margin-left: 15vw;
-    z-index: 3;
+    margin-top: 5vh;
+    font-size: 3rem;
+    text-align: center;
     color: $accent;
-    letter-spacing: 4px;
-    display: flex;
-    align-items: center;
+    letter-spacing: 2px;
     font-weight: 900;
-
-    @media screen and (max-width: 1545px) {
-      margin-left: 5vw;
-    }
 
     @media screen and (max-width: 1100px) {
       font-size: 3rem;
     }
-
-    > .material-icons {
-      font-size: 4rem;
-    }
   }
 
   > #projects {
-    margin-top: 5vh;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 4vw;
+    margin-top: 5vh;
     justify-content: center;
-    align-items: center;
-    gap: 12.5vh;
 
-    > .projects-item {
+    @media screen and (max-width: 1200px) {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
-      gap: 4vh;
-      > h1 {
-        font-size: 2rem;
-        letter-spacing: 1.5px;
+      flex-wrap: nowrap;
+      gap: 5vh;
+    }
+
+    .s1,
+    .s3 {
+      margin-top: 100px;
+
+      @media screen and (max-width: 1200px) {
+        margin-top: 0px;
+      }
+    }
+
+    .projects-item {
+      width: 550px;
+      height: fit-content;
+      border-radius: 10px;
+      animation: fadeIn 3s;
+
+      @media screen and (max-width: 580px) {
+        width: 95vw;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
       }
 
       > .projects-body {
         display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        padding: 15px;
 
-        @media screen and (max-width: 600px) {
-          flex-direction: column;
-          gap: 5vh;
-        }
+        > .projects-title {
+          font-weight: 900;
+          display: flex;
+          align-items: center;
 
-        > .projects-image {
-          position: relative;
-
-          > img,
-          iframe {
-            width: 900px;
-            height: 500px;
-            border-radius: 5px;
-            object-fit: cover;
-            // border: 1px solid white;
-            box-shadow: 1px 1px 5px black;
-
-            @media screen and (max-width: 1100px) {
-              width: 600px;
-              height: 400px;
-            }
-
-            @media screen and (max-width: 800px) {
-              height: 300px;
-              width: 400px;
-            }
-
-            @media screen and (max-width: 430px) {
-              height: 300px;
-              width: 100vw;
-            }
+          @media screen and (max-width: 580px) {
+            flex-direction: column;
+            align-items: flex-start;
           }
 
-          > .projects-description {
-            background: $background;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid gray;
-            font-weight: 600;
-            line-height: 30px;
-            position: absolute;
-            bottom: 35px;
-            left: 0;
-
-            animation: 0.1s fadeIn;
-          }
-
-          @keyframes fadeIn {
-            0% {
-              transform: translateY(50px);
-            }
-
-            100% {
-              transform: translateY(0px);
-            }
-          }
-
-          > .projects-tech {
+          > .projects-buttons {
             display: flex;
+            margin-left: auto;
             gap: 15px;
-            margin-top: 10px;
 
-            @media screen and (max-width: 800px) {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              grid-template-rows: repeat(2, 1fr);
-              text-align: center;
+            @media screen and (max-width: 580px) {
+              margin-right: auto;
+              margin-left: 0;
+              padding-top: 5px;
             }
 
-            > p {
-              font-size: 0.9rem;
-              font-weight: bold;
-              padding-bottom: 3px;
-              border-bottom: 2px solid $accent;
+            > a,
+            p {
+              background-color: $accent;
+              border-radius: 10px;
+              padding: 5px 10px;
+              font-size: 0.8rem;
 
-              @media screen and (max-width: 430px) {
-                font-size: 13px;
-                font-weight: 500;
+              @media screen and (max-width: 320px) {
+                padding: 5px;
               }
             }
           }
         }
 
-        > .projects-buttons {
+        > .projects-description {
+          font-weight: 600;
+          line-height: 22px;
+        }
+
+        > .projects-tech {
           display: flex;
-          flex-direction: column;
-          gap: 20px;
-          margin-right: 15px;
+          gap: 10px;
+          flex-wrap: wrap;
 
-          @media screen and (max-width: 600px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            gap: 10px;
-          }
-
-          > * {
-            border: none;
-            background-color: transparent;
-            color: white;
-            border: 1px solid white;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            padding: 10px 25px;
-            text-align: center;
-            margin-left: 25px;
-
-            transition: color 0.15s ease-in-out,
-              background-color 0.15s ease-in-out;
-            &:hover {
-              color: black;
-              background-color: white;
-              cursor: pointer;
-            }
-
-            @media screen and (max-width: 600px) {
-              font-size: 0.8rem;
-              margin-left: 2px;
-            }
+          > p {
+            background-color: #212121;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-weight: 600;
           }
         }
       }
+
+      background-color: #121212;
+    }
+  }
+
+  > a {
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    margin-top: 5vh;
+    text-align: center;
+    align-self: center;
+    gap: 10px;
+    border-bottom: 5px solid $accent;
+
+    transition: color 0.1 ease-in-out;
+    &:hover {
+      color: $accent;
+      cursor: pointer;
     }
 
-    > a {
+    > .material-icons {
       font-size: 2rem;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      border-bottom: 5px solid $accent;
-
-      transition: color 0.1 ease-in-out;
-      &:hover {
-        color: $accent;
-      }
-
-      > .material-icons {
-        font-size: 2rem;
-      }
     }
   }
 }
@@ -370,7 +310,7 @@ footer {
 
     transition: color 0.1s ease-in-out;
     &:hover {
-      color: wheat;
+      color: white;
     }
   }
 
