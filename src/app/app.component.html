@@ -172,6 +172,18 @@
     >
       <img [src]="project.image" />
 
+      <iframe
+        src="https://ghbtns.com/github-btn.html?user=JasonCqq&repo=link-saver&type=star&count=true&size=large"
+        frameborder="0"
+        scrolling="0"
+        width="170"
+        height="30"
+        title="GitHub"
+        *ngIf="project.id === 0"
+        class="github-star"
+      >
+      </iframe>
+
       <div class="projects-body">
         <div class="projects-title">
           <h1>{{ project.title }}</h1>
