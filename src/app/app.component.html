@@ -218,22 +218,19 @@
     </div>
   </section>
 
-  <a (click)="this.show = true; showMore()" *ngIf="this.show === false"
-    >Show More <span class="material-icons"> arrow_forward </span></a
+  <a (click)="this.show = true; showMore()"
+    >{{ this.show ? "Show Less" : "Show More"
+    }}<span class="material-icons"> arrow_forward </span></a
   >
 
-  <a (click)="this.show = false; showMore()" *ngIf="this.show === true"
-    >Show Less <span class="material-icons"> arrow_forward </span></a
-  >
+  <footer>
+    <a
+      href="https://github.com/JasonCqq/personal-site"
+      target="_blank"
+      aria-label="Site Source Code"
+    >
+      Code available on GitHub
+      <span class="material-icons"> north_east </span>
+    </a>
+  </footer>
 </main>
-
-<footer>
-  <a
-    href="https://github.com/JasonCqq/personal-site"
-    target="_blank"
-    aria-label="Site Source Code"
-  >
-    Code available on GitHub
-    <span class="material-icons"> north_east </span>
-  </a>
-</footer>

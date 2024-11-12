@@ -6,6 +6,14 @@ main {
   height: auto;
   width: 100%;
 
+  background-color: $background;
+  background-image: radial-gradient(
+      at 100% 0%,
+      hsla(222, 100%, 59%, 0.07) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 34% 63%, $background 0px, transparent 50%);
+
   > #land {
     height: 40vh;
     width: fit-content;
@@ -64,7 +72,7 @@ main {
         top: 0;
         right: 0;
         margin-right: 10vw;
-        background: $background;
+        background: transparent;
         z-index: 2;
         border-radius: 10px;
 
@@ -157,7 +165,7 @@ main {
   > #projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 4vw;
+    gap: 3vw;
     margin-top: 5vh;
     justify-content: center;
 
@@ -171,7 +179,10 @@ main {
     }
 
     .s0 {
-      box-shadow: 1px 1px 25px $accent;
+      box-shadow: 1px 1px 50px #39393966;
+      > img {
+        object-fit: cover;
+      }
     }
 
     .s1,
@@ -193,7 +204,7 @@ main {
 
     .projects-item {
       position: relative;
-      width: 550px;
+      width: 525px;
       height: fit-content;
       border-radius: 10px;
       animation: fadeIn 3s;
@@ -250,6 +261,14 @@ main {
               border-radius: 10px;
               padding: 5px 10px;
               font-size: 0.8rem;
+              border: 2px solid transparent;
+
+              transition: background-color 0.1s ease-in-out,
+                border 0.1s ease-in-out;
+              &:hover {
+                border: 2px solid $accent;
+                background-color: transparent;
+              }
 
               @media screen and (max-width: 320px) {
                 padding: 5px;
@@ -291,8 +310,11 @@ main {
     align-self: center;
     gap: 10px;
     border-bottom: 5px solid $accent;
+    color: white;
+    padding-bottom: 7px;
+    border-radius: 3px;
 
-    transition: color 0.1 ease-in-out;
+    transition: color 0.1s ease-in-out;
     &:hover {
       color: $accent;
       cursor: pointer;
