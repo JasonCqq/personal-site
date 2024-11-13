@@ -34,6 +34,7 @@ export class AppComponent {
   show: boolean = false;
 
   showMore() {
+    this.show = !this.show;
     if (this.show === true) {
       this.projects.push(
         {
