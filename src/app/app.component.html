@@ -10,13 +10,18 @@
         <a
           class="land-mail"
           href="m&#97;ilto&#58;j&#97;sonh%&#51;2&#37;3&#49;&#55;&#49;&#53;&#64;%&#54;&#55;mail&#46;com"
+          (click)="toggleEmail()"
         >
           <i
             class="fa fa-envelope"
             aria-hidden="true"
             style="font-size: 1.75rem"
-          ></i
-        ></a>
+          ></i>
+
+          <p class="land-email" *ngIf="showE === true">
+            jasonh21715&#64;gmail.com
+          </p>
+        </a>
 
         <a
           href="https://github.com/JasonCqq"
@@ -184,6 +189,22 @@
       >
       </iframe>
 
+      <div
+        class="video-overlay"
+        *ngIf="project.showVid"
+        (click)="toggleVideo(project.id)"
+      >
+        <iframe
+          [src]="safeUrl(project.videoSrc)"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          class="project-video"
+        ></iframe>
+      </div>
+
       <div class="projects-body">
         <div class="projects-title">
           <h1>{{ project.title }}</h1>
@@ -192,16 +213,18 @@
             <a
               href="{{ project.appHref }}"
               target="_blank"
-              *ngIf="project.id !== 1"
+              *ngIf="project.appHref"
               >Live App</a
             >
             <a
               href="{{ project.githubHref }}"
               target="_blank"
-              *ngIf="project.id !== 1"
+              *ngIf="project.githubHref"
               >Github</a
             >
-            <p (click)="toggleVideo(project.id)">Show Demo</p>
+            <p (click)="toggleVideo(project.id)" *ngIf="project.videoSrc">
+              Show Demo
+            </p>
           </div>
         </div>
 

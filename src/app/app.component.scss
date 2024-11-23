@@ -7,12 +7,6 @@ main {
   width: 100%;
 
   background-color: $background;
-  background-image: radial-gradient(
-      at 100% 0%,
-      hsla(222, 100%, 59%, 0.07) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 34% 63%, $background 0px, transparent 50%);
 
   > #land {
     height: 40vh;
@@ -89,6 +83,20 @@ main {
           &:hover {
             cursor: pointer;
             color: $accent;
+          }
+
+          > .land-email {
+            background-color: #121212;
+            z-index: 99;
+            position: absolute;
+            left: 0;
+            width: fit-content;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 20px;
+            margin-top: 20px;
+            font-size: 1rem;
+            font-weight: 600;
           }
         }
       }
@@ -179,7 +187,7 @@ main {
     }
 
     .s0 {
-      box-shadow: 1px 1px 50px #39393966;
+      box-shadow: 1px 1px 50px #36363666;
       > img {
         object-fit: cover;
       }
@@ -207,7 +215,7 @@ main {
       width: 525px;
       height: fit-content;
       border-radius: 10px;
-      animation: fadeIn 3s;
+      animation: fadeIn 1s;
 
       @media screen and (max-width: 580px) {
         width: 95vw;
@@ -266,12 +274,16 @@ main {
               padding: 5px 10px;
               font-size: 0.8rem;
               border: 2px solid transparent;
+              font-weight: 700;
+              color: rgb(226, 226, 226);
 
               transition: background-color 0.1s ease-in-out,
                 border 0.1s ease-in-out;
+
               &:hover {
                 border: 2px solid $accent;
                 background-color: transparent;
+                cursor: pointer;
               }
 
               @media screen and (max-width: 320px) {
@@ -297,6 +309,28 @@ main {
             border-radius: 10px;
             font-weight: 600;
           }
+        }
+      }
+
+      > .video-overlay {
+        background-color: rgba($color: #000000, $alpha: 0.75);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        &:hover {
+          cursor: pointer;
+        }
+
+        > .project-video {
+          width: 50vw;
+          height: 60vh;
+          z-index: 99;
         }
       }
 
