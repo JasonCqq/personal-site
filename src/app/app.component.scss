@@ -76,9 +76,10 @@ main {
 
         > a {
           transition: color 0.1s ease-in-out;
-          background-color: #121212;
+          background-color: #000000;
           padding: 10px;
           border-radius: 10px;
+          
 
           &:hover {
             cursor: pointer;
@@ -186,12 +187,6 @@ main {
       gap: 5vh;
     }
 
-    .s0 {
-      box-shadow: 1px 1px 50px #36363666;
-      > img {
-        object-fit: cover;
-      }
-    }
 
     .s1,
     .s3 {
