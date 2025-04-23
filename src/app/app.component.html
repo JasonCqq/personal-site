@@ -168,7 +168,7 @@
     </div>
   </div>
 
-  <h1 class="projects-title">Projects</h1>
+  <h1 class="projects-title">My Work</h1>
   <section id="projects">
     <div
       class="projects-item"
@@ -214,7 +214,7 @@
               href="{{ project.appHref }}"
               target="_blank"
               *ngIf="project.appHref"
-              >Live App</a
+              >Live</a
             >
             <a
               href="{{ project.githubHref }}"
@@ -223,7 +223,7 @@
               >Github</a
             >
             <p (click)="toggleVideo(project.id)" *ngIf="project.videoSrc">
-              Show Demo
+              Demo
             </p>
           </div>
         </div>
@@ -243,16 +243,6 @@
 
   <a (click)="showMore()"
     >{{ this.show ? "Show Less" : "Show More"
-    }}<span class="material-icons"> arrow_forward </span></a
+    }}</a
   >
-
-  <footer>
-    <a
-      href="https://github.com/JasonCqq/personal-site"
-      target="_blank"
-      aria-label="Site Source Code"
-    >
-      Code available on GitHub
-    </a>
-  </footer>
 </main>
