@@ -9,7 +9,7 @@ main {
   background-color: $background;
 
   > #land {
-    height: 40vh;
+    height: 30vh;
     width: fit-content;
     display: flex;
     margin-top: 20vh;
@@ -25,21 +25,17 @@ main {
       }
 
       > .land-name {
-        font-size: 5rem;
-        font-weight: 800;
-        letter-spacing: 2px;
+        font-size: 4.25rem;
+        font-weight: 700;
+        letter-spacing: 1px;
         line-height: 85px;
 
-        @media screen and (max-width: 520px) {
-          font-size: 4rem;
-        }
-
-        @media screen and (max-width: 420px) {
+        @media screen and (max-width: 620px) {
           font-size: 3rem;
         }
 
-        @media screen and (max-width: 320px) {
-          font-size: 2.5rem;
+        @media screen and (max-width: 390px) {
+          font-size: 2.25rem;
         }
       }
 
@@ -47,6 +43,15 @@ main {
         text-align: end;
         letter-spacing: 1px;
         padding-left: 25px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: $textSec;
+
+        @media screen and (max-width: 600px) {
+          text-align: center;
+          padding-left: 0px;
+        }
+    
 
         @media screen and (max-width: 420px) {
           font-size: 1.2rem;
@@ -102,7 +107,7 @@ main {
   }
 
   > .skills-container {
-    height: 40vh;
+    height: 20vh;
     width: 95vw;
     display: flex;
     flex-direction: column;
@@ -121,7 +126,6 @@ main {
       > .skills-item {
         border-radius: 10px;
         padding: 10px 15px;
-        background-color: #121212;
 
         @media screen and (max-width: 910px) {
           padding: 10px 10px;
@@ -137,11 +141,19 @@ main {
           }
         }
 
+        @media screen and (max-width: 400px) {
+          padding: 2.5px;
+          > img {
+            width: 25px;
+          }
+        }
+
         > p {
-          color: $textSec;
-          font-weight: 400;
+          font-weight: 500;
           font-size: 12px;
           letter-spacing: 0.5px;
+          margin-top: 3px;
+
 
           @media screen and (max-width: 415px) {
             font-size: 8px;
@@ -157,12 +169,10 @@ main {
   }
 
   > .projects-title {
-    margin-top: 5vh;
+    margin-top: 15vh;
     font-size: 3rem;
     text-align: center;
-    color: $accent;
-    letter-spacing: 2px;
-    font-weight: 900;
+    font-weight:700;
 
     @media screen and (max-width: 1100px) {
       font-size: 3rem;
@@ -172,8 +182,8 @@ main {
   > #projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 5vw;
-    margin-top: 3vh;
+    gap: 3vw;
+    margin-top: 5vh;
     justify-content: center;
 
     @media screen and (max-width: 1200px) {
@@ -185,20 +195,16 @@ main {
       gap: 5vh;
     }
 
-
     .github-star {
       position: absolute;
-      top: 0;
-      left: 0;
-      margin-left: 10px;
-      margin-top: 10px;
+      z-index: 99;
     }
 
     .projects-item {
       position: relative;
       width: 525px;
       height: fit-content;
-      border-radius: 10px;
+      border-radius: 5px;
       animation: fadeIn 1s;
 
       @media screen and (max-width: 580px) {
@@ -216,9 +222,9 @@ main {
 
       img {
         width: 100%;
-        height: 350px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        height: 100%;
+
+        object-fit: contain;
 
         @media screen and (max-width: 580px) {
           object-fit: cover;
@@ -229,12 +235,16 @@ main {
         display: flex;
         flex-direction: column;
         gap: 2vh;
-        padding: 15px;
+        padding: 7.5px;
 
         > .projects-title {
-          font-weight: 800;
           display: flex;
           align-items: center;
+
+          > h1 {
+            font-weight: 600;
+            font-size: 1.25rem;
+          }
 
           @media screen and (max-width: 580px) {
             flex-direction: column;
@@ -256,9 +266,9 @@ main {
             p {
               background: transparent;
               padding: 5px 10px;
-              font-size: 0.8rem;
-              border-bottom: 3px solid $accent;
-              font-weight: 700;
+              font-size: 0.75rem;
+              border-bottom: 2px solid $accent;
+              font-weight: 500;
               color: rgb(226, 226, 226);
 
               transition: color 0.1s ease-in-out;
@@ -278,6 +288,14 @@ main {
         > .projects-description {
           font-weight: 500;
           line-height: 22px;
+          font-size: 0.9rem;
+          color: $textSec;
+          transition: color .15s ease-in-out;
+
+
+          &:hover{
+            color: white;
+          }
         }
 
         > .projects-tech {
@@ -287,11 +305,11 @@ main {
           padding-bottom: 10px;
 
           > p {
-            background-color: #272729;
+            background-color: #272727;
             padding: 5px 10px;
-            border-radius: 10px;
+            border-radius: 25px;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 12px;
           }
         }
       }
@@ -318,33 +336,26 @@ main {
         }
       }
 
-      background-color: #121212;
     }
   }
 
   > a {
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     display: flex;
     align-items: center;
     margin-top: 5vh;
     text-align: center;
     align-self: center;
     gap: 10px;
-    border-bottom: 5px solid $accent;
     color: white;
-    padding-bottom: 7px;
-    border-radius: 3px;
     margin-bottom: 10vh;
 
-    transition: color 0.1s ease-in-out;
+    transition: color 0.15s ease-in-out;
     &:hover {
       color: $accent;
       cursor: pointer;
     }
 
-    > .material-icons {
-      font-size: 2rem;
-    }
   }
 }

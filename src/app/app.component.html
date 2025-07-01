@@ -2,8 +2,7 @@
   <section id="land">
     <div class="land-cont">
       <h1 class="land-name">
-        <span style="color: #3b82f6">Hello</span> <br />
-        I am Jason
+        Jason Huang
       </h1>
       <h2>Fullstack Web Developer</h2>
       <div class="land-links">
@@ -175,8 +174,7 @@
       [ngClass]="'s' + project.id"
       *ngFor="let project of projects"
     >
-      <img [src]="project.image" />
-
+    
       <iframe
         src="https://ghbtns.com/github-btn.html?user=JasonCqq&repo=link-saver&type=star&count=true&size=large"
         frameborder="0"
@@ -188,6 +186,8 @@
         class="github-star"
       >
       </iframe>
+
+      <img [src]="project.image" />
 
       <div
         class="video-overlay"
