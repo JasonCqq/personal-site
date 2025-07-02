@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Inter";
-  src: url("./assets/Inter.ttf");
+  font-family: "Montserrat";
+  src: url("./assets/Montserrat.ttf");
 }
 
 $background: #0d1012;
@@ -11,7 +11,7 @@ $accent: #3b82f6;
 html {
   scroll-behavior: smooth;
   background-color: $background;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   color: $text;
@@ -26,7 +26,7 @@ body {
 }
 
 code {
-  font-family: "Inter", source-code-pro, Menlo, Monaco, Consolas,
+  font-family: "Montserrat", source-code-pro, Menlo, Monaco, Consolas,
     "Courier New", monospace;
 }
 
@@ -78,10 +78,10 @@ a {
 input,
 textarea {
   color: $text;
-  font-family: "Inter";
+  font-family: "Montserrat";
 }
 button {
-  font-family: "Inter";
+  font-family: "Montserrat";
 }
 
 html,
