@@ -46,6 +46,19 @@ export class AppComponent {
       this.projects.push(
         {
           id: 3,
+          title: "minBlog",
+          image: "../assets/23.png",
+          videoSrc: "https://www.youtube.com/embed/J5s9PAta4V0?si=TyCnC-xOPs1JOwRn",
+          description:
+            "Blog sharing and reading platform with short blogs (max 1500 chars). With features such as user authentication, and basic CMS features: user profiles, blog searching, commenting, filtering, and pagination",
+          appHref: "https://minblog21715.netlify.app/",
+          githubHref: "https://github.com/JasonCqq/minBlog",
+          iconsHTML: ["React", "MongoDB", "Express", "Node", "Typescript"],
+          showVid: false,
+        },
+
+        {
+          id: 4,
           title: "Jwitter",
           image: "../assets/jwitter.png",
           videoSrc:
@@ -59,7 +72,7 @@ export class AppComponent {
         },
 
         {
-          id: 4,
+          id: 5,
           title: "Wimmelbilder",
           image: "../assets/wimmel.png",
           videoSrc:
@@ -73,6 +86,7 @@ export class AppComponent {
         }
       );
     } else if (this.show === false) {
+      this.projects.pop();
       this.projects.pop();
       this.projects.pop();
     }
@@ -125,14 +139,14 @@ export class AppComponent {
 
     {
       id: 2,
-      title: "minBlog",
-      image: "../assets/23.png",
-      videoSrc: "https://www.youtube.com/embed/J5s9PAta4V0?si=TyCnC-xOPs1JOwRn",
+      title: "Poshe' Salon Design",
+      image: "../assets/81.jpg",
+      videoSrc: "",
       description:
-        "Blog sharing and reading platform with short blogs (max 1500 chars). With features such as user authentication, and basic CMS features: user profiles, blog searching, commenting, filtering, and pagination",
+        "Designed user-friendly and modern UI web pages for a local nail salon business using Figma, focusing on intuitive navigation, clean aesthetics, and a visually appealing layout",
       appHref: "https://minblog21715.netlify.app/",
-      githubHref: "https://github.com/JasonCqq/minBlog",
-      iconsHTML: ["React", "MongoDB", "Express", "Node", "Typescript"],
+      githubHref: "",
+      iconsHTML: ["Figma"],
       showVid: false,
     },
   ];

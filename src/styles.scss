@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "Montserrat";
-  src: url("./assets/Montserrat-VariableFont_wght.ttf");
+  font-family: "Inter";
+  src: url("./assets/Inter.ttf");
 }
 
-$background: #101316;
+$background: #0d1012;
 $text: white;
 $textSec: #6C6D6F;
 $accent: #3b82f6;
@@ -11,7 +11,7 @@ $accent: #3b82f6;
 html {
   scroll-behavior: smooth;
   background-color: $background;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   color: $text;
@@ -26,7 +26,7 @@ body {
 }
 
 code {
-  font-family: "Montserrat", source-code-pro, Menlo, Monaco, Consolas,
+  font-family: "Inter", source-code-pro, Menlo, Monaco, Consolas,
     "Courier New", monospace;
 }
 
@@ -46,7 +46,7 @@ code {
   background: $background;
 }
 ::-webkit-scrollbar-thumb {
-  background: $accent;
+  background: rgb(20, 20, 20);
 }
 
 // CSS Reset
@@ -78,10 +78,10 @@ a {
 input,
 textarea {
   color: $text;
-  font-family: "Montserrat";
+  font-family: "Inter";
 }
 button {
-  font-family: "Montserrat";
+  font-family: "Inter";
 }
 
 html,
