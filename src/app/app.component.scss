@@ -167,7 +167,7 @@ main {
   }
 
   > .projects-title {
-    margin-top: 15vh;
+    margin-top: 20vh;
     font-size: 3rem;
     text-align: center;
     font-weight:700;
@@ -181,8 +181,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 3vw;
-    margin-top: 5vh;
+    margin-top: 4vh;
     justify-content: center;
+    margin-bottom: 15vh;
 
     @media screen and (max-width: 1200px) {
       display: flex;
@@ -335,25 +336,5 @@ main {
       }
 
     }
-  }
-
-  > a {
-    font-size: 2rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    margin-top: 5vh;
-    text-align: center;
-    align-self: center;
-    gap: 10px;
-    color: white;
-    margin-bottom: 10vh;
-
-    transition: color 0.15s ease-in-out;
-    &:hover {
-      color: $accent;
-      cursor: pointer;
-    }
-
   }
 }
