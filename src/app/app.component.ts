@@ -117,7 +117,7 @@ export class AppComponent {
 
     {
       id: 1,
-      title: "Project0 (Private)",
+      title: "Project0 - Private",
       image: "../assets/project0.png",
       videoSrc: "https://www.youtube.com/embed/tRKLOirIqDw?si=cd--hdmPZsVExS-i",
       description:
@@ -144,7 +144,7 @@ export class AppComponent {
       videoSrc: "",
       description:
         "Designed user-friendly and modern UI web pages for a local nail salon business using Figma, focusing on intuitive navigation, clean aesthetics, and a visually appealing layout",
-      appHref: "https://minblog21715.netlify.app/",
+      appHref: "https://www.figma.com/proto/os9Xjm0Sg15usdLnk8UFX0/Poshe?node-id=2028-8&p=f&t=HokGw9bttATVhXYj-1&scaling=scale-down&content-scaling=fixed&page-id=2028%3A7",
       githubHref: "",
       iconsHTML: ["Figma"],
       showVid: false,
