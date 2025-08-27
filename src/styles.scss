@@ -3,17 +3,17 @@
   src: url("./assets/TTSans.ttf");
 }
 
-$background: #0d1012;
+$background: #00171f;
 $text: white;
-$textSec: #6C6D6F;
+$textSec: #a9abb1;
 $accent: #3b82f6;
 
 html {
   scroll-behavior: smooth;
   background-color: $background;
-  font-family: "TT", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "TT", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: $text;
 }
 
@@ -26,8 +26,8 @@ body {
 }
 
 code {
-  font-family: "TT", source-code-pro, Menlo, Monaco, Consolas,
-    "Courier New", monospace;
+  font-family: "TT", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 // Custom Text Highlight Color
