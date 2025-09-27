@@ -1,19 +1,20 @@
 @font-face {
-  font-family: "TT";
-  src: url("./assets/TTSans.ttf");
+  font-family: "Inter";
+  src: url("./assets/Inter-VariableFont_opsz\,wght.ttf");
 }
 
-$background: #0d1012;
-$text: white;
-$textSec: #6C6D6F;
-$accent: #3b82f6;
+$background: #000;
+$text: #eeedef;
+$textSec: #cccace;
+$accent: #33c6eb;
+$container: #111419;
 
 html {
   scroll-behavior: smooth;
   background-color: $background;
-  font-family: "TT", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: $text;
 }
 
@@ -26,8 +27,8 @@ body {
 }
 
 code {
-  font-family: "TT", source-code-pro, Menlo, Monaco, Consolas,
-    "Courier New", monospace;
+  font-family: "Inter", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 // Custom Text Highlight Color
@@ -78,10 +79,10 @@ a {
 input,
 textarea {
   color: $text;
-  font-family: "TT";
+  font-family: "Inter";
 }
-button {
-  font-family: "TT";
+buInteron {
+  font-family: "Inter";
 }
 
 html,

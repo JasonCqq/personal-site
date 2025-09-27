@@ -63,6 +63,19 @@ export class AppComponent {
 
     {
       id: 1,
+      title: "Poshe' Salon Design",
+      image: "../assets/1.jpg",
+      videoSrc: "",
+      description:
+        "Designed user-friendly and modern UI web pages for a local nail salon business using Figma, focusing on intuitive navigation, clean aesthetics, and a visually appealing layout",
+      appHref: "https://poshe-ivory.vercel.app/",
+      githubHref: "",
+      iconsHTML: ["Figma"],
+      showVid: false,
+    },
+
+    {
+      id: 2,
       title: "Project0 - Private",
       image: "../assets/project0.png",
       videoSrc: "https://www.youtube.com/embed/tRKLOirIqDw?si=cd--hdmPZsVExS-i",
@@ -84,19 +97,6 @@ export class AppComponent {
     },
 
     {
-      id: 2,
-      title: "Poshe' Salon Design",
-      image: "../assets/81.jpg",
-      videoSrc: "",
-      description:
-        "Designed user-friendly and modern UI web pages for a local nail salon business using Figma, focusing on intuitive navigation, clean aesthetics, and a visually appealing layout",
-      appHref: "https://www.figma.com/proto/os9Xjm0Sg15usdLnk8UFX0/Poshe?node-id=2028-8&p=f&t=HokGw9bttATVhXYj-1&scaling=scale-down&content-scaling=fixed&page-id=2028%3A7",
-      githubHref: "",
-      iconsHTML: ["Figma"],
-      showVid: false,
-    },
-
-    {
       id: 3,
       title: "minBlog",
       image: "../assets/23.png",
@@ -113,8 +113,7 @@ export class AppComponent {
       id: 4,
       title: "Jwitter",
       image: "../assets/jwitter.png",
-      videoSrc:
-        "https://www.youtube.com/embed/hJ5OKDj8ZxE?si=3VvpDTXYR4fWYPD_",
+      videoSrc: "https://www.youtube.com/embed/hJ5OKDj8ZxE?si=3VvpDTXYR4fWYPD_",
       description:
         "Twitter clone that replicates the core features of old Twitter. This project was developed from scratch without relying on tutorials to practice full stack skills.",
       appHref: "https://main--chipper-gnome-4de1e9.netlify.app/",
@@ -127,14 +126,13 @@ export class AppComponent {
       id: 5,
       title: "Wimmelbilder",
       image: "../assets/wimmel.png",
-      videoSrc:
-        "https://www.youtube.com/embed/X6CBm3JiTpw?si=oEIt9r47LMV1-K0H",
+      videoSrc: "https://www.youtube.com/embed/X6CBm3JiTpw?si=oEIt9r47LMV1-K0H",
       description:
         "Very simple where's waldo inspired game, has fun features like leaderboard",
       appHref: "https://main--nimble-cendol-ef155b.netlify.app/#/",
       githubHref: "https://github.com/JasonCqq/Wimmelbilder",
       iconsHTML: ["React", "Typescript", "Firebase"],
       showVid: false,
-    }
+    },
   ];
 }
