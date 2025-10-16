@@ -10,7 +10,6 @@ interface Project {
   appHref: string;
   githubHref: string;
   iconsHTML: string[];
-  showVid: boolean;
 }
 
 @Component({
@@ -34,8 +33,16 @@ export class AppComponent {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  toggleVideo(id: number): void {
-    this.projects[id].showVid = !this.projects[id].showVid;
+  // Youtube video demo
+  activeVideoSrc: string | null = null;
+  openVideo(url: string) {
+    this.activeVideoSrc = url;
+    document.body.style.overflow = "hidden";
+  }
+
+  closeVideo() {
+    this.activeVideoSrc = null;
+    document.body.style.overflow = "auto";
   }
 
   projects: Project[] = [
@@ -58,25 +65,23 @@ export class AppComponent {
         "HTML",
         "SCSS",
       ],
-      showVid: false,
     },
 
     {
       id: 1,
-      title: "Poshe' Salon Design",
+      title: "Poshe' Salon Website",
       image: "../assets/1.jpg",
       videoSrc: "",
       description:
-        "Designed user-friendly and modern UI web pages for a local nail salon business using Figma, focusing on intuitive navigation, clean aesthetics, and a visually appealing layout",
+        "Designed user-friendly and modern UI web pages for a local nail salon business using NextJS + Figma, focusing on intuitive navigation, clean aesthetics, and a visually appealing layout",
       appHref: "https://poshe-ivory.vercel.app/",
       githubHref: "",
-      iconsHTML: ["Figma"],
-      showVid: false,
+      iconsHTML: ["NextJS", "Typescript", "HTML", "SCSS", "Figma"],
     },
 
     {
       id: 2,
-      title: "Project0 - Private",
+      title: "Project0 - Private Project",
       image: "../assets/project0.png",
       videoSrc: "https://www.youtube.com/embed/tRKLOirIqDw?si=cd--hdmPZsVExS-i",
       description:
@@ -93,7 +98,6 @@ export class AppComponent {
         "HTML",
         "SCSS",
       ],
-      showVid: false,
     },
 
     {
@@ -106,7 +110,6 @@ export class AppComponent {
       appHref: "https://minblog21715.netlify.app/",
       githubHref: "https://github.com/JasonCqq/minBlog",
       iconsHTML: ["React", "MongoDB", "Express", "Node", "Typescript"],
-      showVid: false,
     },
 
     {
@@ -119,7 +122,6 @@ export class AppComponent {
       appHref: "https://main--chipper-gnome-4de1e9.netlify.app/",
       githubHref: "https://github.com/JasonCqq/Jwitter",
       iconsHTML: ["React", "Typescript", "Firebase"],
-      showVid: false,
     },
 
     {
@@ -132,7 +134,6 @@ export class AppComponent {
       appHref: "https://main--nimble-cendol-ef155b.netlify.app/#/",
       githubHref: "https://github.com/JasonCqq/Wimmelbilder",
       iconsHTML: ["React", "Typescript", "Firebase"],
-      showVid: false,
     },
   ];
 }

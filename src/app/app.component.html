@@ -196,22 +196,6 @@
 
       <img [src]="project.image" />
 
-      <div
-        class="video-overlay"
-        *ngIf="project.showVid"
-        (click)="toggleVideo(project.id)"
-      >
-        <iframe
-          [src]="safeUrl(project.videoSrc)"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          class="project-video"
-        ></iframe>
-      </div>
-
       <div class="projects-body">
         <div class="projects-title">
           <h1>{{ project.title }}</h1>
@@ -229,7 +213,7 @@
               *ngIf="project.githubHref"
               >Github</a
             >
-            <p (click)="toggleVideo(project.id)" *ngIf="project.videoSrc">
+            <p (click)="openVideo(project.videoSrc)" *ngIf="project.videoSrc">
               Demo
             </p>
           </div>
@@ -247,4 +231,16 @@
       </div>
     </div>
   </section>
+
+  <!-- Youtube DEMO Embed-->
+  <div class="video-overlay" *ngIf="activeVideoSrc" (click)="closeVideo()">
+    <iframe
+      [src]="safeUrl(activeVideoSrc)"
+      class="project-video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      title="YouTube Video"
+    ></iframe>
+  </div>
 </main>
