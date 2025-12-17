@@ -101,14 +101,14 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2.5vh;
-    margin-top: 10vh;
+    margin-top: 5vh;
 
     > .skills-flex {
       display: flex;
       flex-wrap: wrap;
       align-content: center;
       justify-content: center;
-      gap: 2vw;
+      gap: 1vw;
       text-align: center;
 
       > .skills-item {
@@ -116,7 +116,8 @@ main {
         padding: 10px 15px;
 
         background-color: $container;
-        border: 3px solid #1f2029;
+        border: 1px solid lch(18.24 4.707 272);
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 44px;
 
         &:hover {
           border-color: white;
@@ -228,7 +229,8 @@ main {
       height: max-content;
       border-radius: 20px;
 
-      border: 3px solid #1f2029;
+      border: 1px solid lch(18.24 4.707 272);
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 44px;
       background-color: $container;
       padding: 20px;
 

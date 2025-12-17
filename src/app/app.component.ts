@@ -50,9 +50,9 @@ export class AppComponent {
       id: 0,
       title: "Linkstorage",
       image: "../assets/1.png",
-      videoSrc: "https://www.youtube.com/embed/OrvRE0zM_QY?si=C6OLIz7M43Z7aYKq",
+      videoSrc: "https://www.youtube.com/embed/6nExgHVOlA8?si=kNukNRsR_CBfl-Yv",
       description:
-        "Store URLs with thumbnails. Has an active userbase and includes many features such as url bank (plain text urls), folder system, folder sharing, link searching/sorting by visits. Visit the live app to see the rest of the features.",
+        "Store URLs with previews/screenshots. Has a small userbase, and includes features like viewing video embeds and websites within the site! Also includes url bank (plain text urls), folder system, folder sharing, link searching/sorting by visits. Visit the live app to see more, with upcoming plans like an extension.",
       appHref: "https://linkstorage.net",
       githubHref: "https://github.com/JasonCqq/link-saver",
       iconsHTML: [
